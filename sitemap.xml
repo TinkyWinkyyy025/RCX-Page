@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Homepage -->
+  <url>
+    <loc>https://www.rcxgroup.com/</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- About Us -->
+  <url>
+    <loc>https://www.rcxgroup.com/about</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Brands Listing -->
+  <url>
+    <loc>https://www.rcxgroup.com/brands</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Careers -->
+  <url>
+    <loc>https://www.rcxgroup.com/careers</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Contact -->
+  <url>
+    <loc>https://www.rcxgroup.com/contact</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- News & Media -->
+  <url>
+    <loc>https://www.rcxgroup.com/news</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Brand Detail Pages -->
+  <!-- Bushido -->
+  <url>
+    <loc>https://www.rcxgroup.com/brands/bushido</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Common Space -->
+  <url>
+    <loc>https://www.rcxgroup.com/brands/common-space</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Dancing Fish -->
+  <url>
+    <loc>https://www.rcxgroup.com/brands/dancing-fish</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Fang Kong -->
+  <url>
+    <loc>https://www.rcxgroup.com/brands/fang-kong</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Paperkite Chicken & Beer -->
+  <url>
+    <loc>https://www.rcxgroup.com/brands/paperkite-chicken-beer</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Picaro -->
+  <url>
+    <loc>https://www.rcxgroup.com/brands/picaro</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- The Rabbit Hole -->
+  <url>
+    <loc>https://www.rcxgroup.com/brands/the-rabbit-hole</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Rama V -->
+  <url>
+    <loc>https://www.rcxgroup.com/brands/rama-v</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Suzie Wong -->
+  <url>
+    <loc>https://www.rcxgroup.com/brands/suzie-wong</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Tap Room -->
+  <url>
+    <loc>https://www.rcxgroup.com/brands/tap-room</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Tap Tap -->
+  <url>
+    <loc>https://www.rcxgroup.com/brands/tap-tap</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- The Beer Factory -->
+  <url>
+    <loc>https://www.rcxgroup.com/brands/the-beer-factory</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Thai Hou Sek -->
+  <url>
+    <loc>https://www.rcxgroup.com/brands/thai-hou-sek</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- The Attic -->
+  <url>
+    <loc>https://www.rcxgroup.com/brands/the-attic</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Tono Izakaya -->
+  <url>
+    <loc>https://www.rcxgroup.com/brands/tono-izakaya</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+</urlset>

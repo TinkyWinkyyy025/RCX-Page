@@ -1,0 +1,182 @@
+<!-- ═══════════════════════════════════════════════════════════════
+     WORDPRESS SEO PLUGIN — configure these on the page settings:
+       Title:       Contact Us | RCX Group
+       Description: Contact RCX Group — reach our head office in Puchong,
+                    Selangor by phone at +603-5882 0108, email at
+                    info@rcxgroup.com, or send us a message for career
+                    enquiries, partnerships, and general questions.
+       Canonical:   https://www.rcxgroup.com/contact
+       OG Image:    (upload a branded image via the SEO plugin)
+═══════════════════════════════════════════════════════════════ -->
+
+<!-- Structured Data: ContactPage (Google reads JSON-LD from body) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ContactPage",
+  "name": "Contact RCX Group",
+  "url": "https://www.rcxgroup.com/contact",
+  "description": "Contact RCX Group for career enquiries, partnership ideas, or general questions.",
+  "mainEntity": {
+    "@type": "Organization",
+    "name": "RCX Group",
+    "legalName": "Rhombus Connexion Sdn. Bhd.",
+    "telephone": "+60358820108",
+    "email": "info@rcxgroup.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "E-6-6, Block E, SetiaWalk, Persiaran Wawasan",
+      "addressLocality": "Pusat Bandar Puchong",
+      "postalCode": "47160",
+      "addressRegion": "Selangor",
+      "addressCountry": "MY"
+    }
+  }
+}
+</script>
+
+<!-- Structured Data: FAQ -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How do I contact RCX Group?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "You can contact RCX Group by phone at +603-5882 0108, by email at info@rcxgroup.com, or by visiting the head office at E-6-6, Block E, SetiaWalk, Persiaran Wawasan, Pusat Bandar Puchong, 47160 Puchong, Selangor."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Where is RCX Group's office located?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "RCX Group's head office is located at E-6-6, Block E, SetiaWalk, Persiaran Wawasan, Pusat Bandar Puchong, 47160 Puchong, Selangor, Malaysia."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What enquiries can I send to RCX Group?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "RCX Group welcomes career enquiries, partnership proposals, investment discussions, and general questions about their F&B brands and operations."
+      }
+    }
+  ]
+}
+</script>
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,700;1,700&display=swap');
+
+    :root {
+        --purple:    #6750A1;
+        --purple-dk: #3E2A6E;
+        --purple-lt: #F0ECF8;
+        --beige:     #E8D0AA;
+        --beige-dk:  #D2B679;
+        --white:     #ffffff;
+        --off-white: #F8F7F4;
+        --dark:      #0E0E0E;
+        --mid:       #1A1A2E;
+    }
+
+    .reveal {
+        opacity: 0;
+        transform: translateY(28px);
+        transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+    .reveal.visible { opacity: 1; transform: none; }
+    .reveal-delay-1 { transition-delay: 0.1s; }
+    .reveal-delay-2 { transition-delay: 0.2s; }
+    .reveal-delay-3 { transition-delay: 0.3s; }
+
+    .page-hero {
+        background: linear-gradient(rgba(14,14,14,0.45), rgba(14,14,14,0.45)),
+                    url('https://rcxgroup.wpcomstaging.com/wp-content/uploads/2026/03/Webpage-slide-Get-in-Touch.png') center/cover no-repeat;
+        padding: 8rem 3rem 6rem;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .hero-inner {
+        max-width: 1200px;
+        margin: 0 auto;
+        position: relative;
+        z-index: 1;
+    }
+
+    .section-label {
+        font-size: 0.62rem;
+        font-weight: 700;
+        letter-spacing: 0.25em;
+        text-transform: uppercase;
+        color: var(--beige);
+        margin-bottom: 1.25rem;
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+    }
+    .section-label::before {
+        content: '';
+        display: block;
+        width: 28px;
+        height: 1px;
+        background: var(--beige);
+    }
+
+    .hero-title {
+        font-size: clamp(3rem, 6.5vw, 5.5rem);
+        font-weight: 900;
+        line-height: 1.0;
+        letter-spacing: -0.02em;
+        color: var(--white);
+        margin-bottom: 1.25rem;
+        max-width: 700px;
+    }
+    .hero-title em {
+        font-style: italic;
+        font-family: 'Playfair Display', serif;
+        color: var(--beige);
+    }
+
+    .hero-sub {
+        font-size: 0.95rem;
+        color: rgba(255,255,255,0.5);
+        line-height: 1.8;
+        max-width: 480px;
+    }
+
+    @media (max-width: 640px) {
+        .page-hero { padding: 6rem 1.5rem 4rem; }
+    }
+</style>
+
+<!-- ═══════════════════════════════════════════
+     HERO
+═══════════════════════════════════════════ -->
+<section class="page-hero">
+    <div class="hero-inner">
+        <p class="section-label reveal">Reach Out</p>
+        <h1 class="hero-title reveal reveal-delay-1">
+            Get <em>In Touch</em>
+        </h1>
+        <p class="hero-sub reveal reveal-delay-2">We'd love to hear from you — whether it's a career enquiry, a partnership idea, or just a hello.</p>
+    </div>
+</section>
+
+<script>
+    const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                revealObserver.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+
+    document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+</script>

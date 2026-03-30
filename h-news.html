@@ -1,0 +1,140 @@
+<!-- ═══════════════════════════════════════════════════════════════
+     WORDPRESS SEO PLUGIN — configure these on the page settings:
+       Title:       News & Updates | RCX Group
+       Description: Stay up to date with the latest news, brand stories,
+                    announcements, and highlights from RCX Group —
+                    Malaysia's leading F&B house operating iconic brands
+                    across Asia.
+       Canonical:   https://www.rcxgroup.com/news
+       OG Image:    (upload a branded image via the SEO plugin)
+═══════════════════════════════════════════════════════════════ -->
+
+<!-- Structured Data: CollectionPage -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "News & Updates | RCX Group",
+  "url": "https://www.rcxgroup.com/news",
+  "description": "Stories, announcements, and highlights from across RCX Group — Malaysia's leading F&B house operating iconic brands across Asia.",
+  "publisher": {
+    "@type": "Organization",
+    "name": "RCX Group",
+    "url": "https://www.rcxgroup.com",
+    "legalName": "Rhombus Connexion Sdn. Bhd."
+  }
+}
+</script>
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,700;1,700&display=swap');
+
+    :root {
+        --purple:    #6750A1;
+        --purple-dk: #3E2A6E;
+        --purple-lt: #F0ECF8;
+        --beige:     #E8D0AA;
+        --beige-dk:  #D2B679;
+        --white:     #ffffff;
+        --off-white: #F6F4F9;
+        --dark:      #0E0E0E;
+        --dark-2:    #1a1a1a;
+        --text-body: #5A5472;
+    }
+
+    .reveal {
+        opacity: 0;
+        transform: translateY(28px);
+        transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+    .reveal.visible { opacity: 1; transform: none; }
+    .reveal-delay-1 { transition-delay: 0.1s; }
+    .reveal-delay-2 { transition-delay: 0.2s; }
+    .reveal-delay-3 { transition-delay: 0.3s; }
+
+    .page-hero {
+        background: linear-gradient(rgba(14,14,14,0.45), rgba(14,14,14,0.45)),
+                    url('https://rcxgroup.wpcomstaging.com/wp-content/uploads/2026/03/Webpage-slide-News-n-Updates-3.png') center/cover no-repeat;
+        padding: 8rem 3rem 6rem;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .hero-inner {
+        max-width: 1200px;
+        margin: 0 auto;
+        position: relative;
+        z-index: 1;
+    }
+
+    .section-label {
+        font-size: 0.62rem;
+        font-weight: 700;
+        letter-spacing: 0.25em;
+        text-transform: uppercase;
+        color: var(--beige);
+        margin-bottom: 1.25rem;
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+    }
+    .section-label::before {
+        content: '';
+        display: block;
+        width: 28px;
+        height: 1px;
+        background: var(--beige);
+    }
+
+    .hero-title {
+        font-size: clamp(3rem, 6.5vw, 5.5rem);
+        font-weight: 900;
+        line-height: 1.0;
+        letter-spacing: -0.02em;
+        color: var(--white);
+        margin-bottom: 1.25rem;
+        max-width: 800px;
+    }
+    .hero-title em {
+        font-style: italic;
+        font-family: 'Playfair Display', serif;
+        color: var(--beige);
+    }
+
+    .hero-sub {
+        font-size: 0.95rem;
+        color: rgba(255,255,255,0.5);
+        line-height: 1.8;
+        max-width: 520px;
+    }
+
+    @media (max-width: 640px) {
+        .page-hero { padding: 6rem 1.5rem 4rem; }
+    }
+</style>
+
+<!-- ═══════════════════════════════════════════
+     HERO
+═══════════════════════════════════════════ -->
+<section class="page-hero">
+    <div class="hero-inner">
+        <p class="section-label reveal">RCX Group</p>
+        <h1 class="hero-title reveal reveal-delay-1">
+            News &amp; <em>Updates</em>
+        </h1>
+        <p class="hero-sub reveal reveal-delay-2">Stories, announcements, and highlights from across the RCX Group.</p>
+    </div>
+</section>
+
+<script>
+    const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                revealObserver.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+
+    document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+</script>

@@ -1,0 +1,989 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RCX Group | We Buy, Create and Operate Iconic F&B Brands</title>
+    <meta name="description" content="RCX Group is a purpose-driven F&B house founded in 1995, bringing iconic dining and nightlife brands to life across Asia through concept creation, strategic investments, and hands-on operations. Based in Puchong, Selangor, Malaysia.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.rcxgroup.com/">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="RCX Group">
+    <meta property="og:url" content="https://www.rcxgroup.com/">
+    <meta property="og:title" content="RCX Group | We Buy, Create and Operate Iconic F&B Brands">
+    <meta property="og:description" content="RCX Group is a purpose-driven F&B house founded in 1995, bringing iconic dining and nightlife brands to life across Asia through concept creation, strategic investments, and hands-on operations.">
+    <meta property="og:image" content="https://rcxgroup.wpcomstaging.com/wp-content/uploads/2026/01/Webpage-slide-Home-Empty.png">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="RCX Group | We Buy, Create and Operate Iconic F&B Brands">
+    <meta name="twitter:description" content="RCX Group is a purpose-driven F&B house bringing iconic dining and nightlife brands to life across Asia.">
+    <meta name="twitter:image" content="https://rcxgroup.wpcomstaging.com/wp-content/uploads/2026/01/Webpage-slide-Home-Empty.png">
+
+    <script>if ('scrollRestoration' in history) history.scrollRestoration = 'manual';</script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+
+    <!-- Structured Data: Organization -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "RCX Group",
+      "legalName": "Rhombus Connexion Sdn. Bhd.",
+      "url": "https://www.rcxgroup.com",
+      "foundingDate": "1995",
+      "description": "RCX Group is a purpose-driven F&B house bringing iconic brands to life across Asia through concept creation, strategic investments, and hands-on operations.",
+      "telephone": "+60358820108",
+      "email": "info@rcxgroup.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "E-6-6, Block E, SetiaWalk, Persiaran Wawasan",
+        "addressLocality": "Pusat Bandar Puchong",
+        "postalCode": "47160",
+        "addressRegion": "Selangor",
+        "addressCountry": "MY"
+      },
+      "areaServed": "Asia",
+      "sameAs": []
+    }
+    </script>
+
+    <!-- Structured Data: WebSite -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "RCX Group",
+      "url": "https://www.rcxgroup.com",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://www.rcxgroup.com/?s={search_term_string}"
+        },
+        "query-input": "required name=search_term_string"
+      }
+    }
+    </script>
+    <style>
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --purple:    #6750A1;
+            --purple-dk: #3E2A6E;
+            --beige:    #E8D0AA;
+            --beige-dk: #D2B679;
+            --white:     #ffffff;
+            --off-white: #F8F7F4;
+            --dark:      #0E0E0E;
+            --mid:       #1A1A2E;
+        }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: var(--dark);
+            color: var(--white);
+            overflow-x: hidden;
+        }
+
+        /* ─────────────────────────────────────────
+           HERO
+        ───────────────────────────────────────── */
+        .hero {
+            position: relative;
+            min-height: 100vh;
+            display: grid;
+            grid-template-rows: auto 1fr auto;
+            overflow: visible;
+        }
+
+        .hero-bg {
+            position: absolute;
+            inset: 0;
+            width: 100%; height: 100%;
+            object-fit: cover;
+            filter: brightness(0.45);
+            z-index: 0;
+        }
+
+        /* dark gradient overlay */
+        .hero::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(
+                to bottom,
+                rgba(14,14,14,0.3) 0%,
+                rgba(14,14,14,0.1) 40%,
+                rgba(14,14,14,0.7) 100%
+            );
+            z-index: 1;
+        }
+
+        /* NAV BAR inside hero */
+        .hero-nav {
+            position: relative;
+            z-index: 10;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 2rem 3rem;
+        }
+
+        .hero-nav img {
+            height: 48px;
+            animation: fadeDown 0.8s ease both;
+        }
+
+        /* HERO BODY */
+        .hero-body-wrap {
+            position: relative;
+            z-index: 10;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 15vh 3rem 0;
+            max-width: 820px;
+        }
+
+        .hero-eyebrow {
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 0.25em;
+            text-transform: uppercase;
+            color: var(--beige);
+            margin-bottom: 1.25rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            animation: fadeUp 0.9s ease 0.2s both;
+        }
+        .hero-eyebrow::before {
+            content: '';
+            display: block;
+            width: 36px;
+            height: 2px;
+            background: var(--beige);
+        }
+
+        .hero-headline {
+            font-size: clamp(2.8rem, 6vw, 5.5rem);
+            font-weight: 900;
+            line-height: 1.0;
+            letter-spacing: -0.02em;
+            color: var(--white);
+            margin-bottom: 2rem;
+            animation: fadeUp 0.9s ease 0.35s both;
+        }
+        .hero-headline em {
+            font-style: italic;
+            font-family: 'Playfair Display', serif;
+            color: var(--beige);
+        }
+
+        .hero-sub {
+            font-size: 0.95rem;
+            color: rgba(255,255,255,0.7);
+            line-height: 1.75;
+            max-width: 560px;
+            animation: fadeUp 0.9s ease 0.5s both;
+        }
+        .hero-sub p + p { margin-top: 1rem; }
+
+        /* HERO FOOTER BAR */
+        .hero-footer {
+            position: relative;
+            z-index: 10;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1.5rem 3rem;
+            border-top: 1px solid rgba(255,255,255,0.12);
+        }
+
+        .hero-stats {
+            display: flex;
+            gap: 3rem;
+            animation: fadeUp 0.9s ease 0.65s both;
+        }
+
+        .hero-stat-item { text-align: center; }
+        .hero-stat-num {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: var(--beige);
+            line-height: 1;
+        }
+        .hero-stat-label {
+            font-size: 0.65rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: rgba(255,255,255,0.5);
+            margin-top: 0.25rem;
+        }
+
+        .hero-scroll {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            font-size: 0.7rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: rgba(255,255,255,0.4);
+            animation: fadeUp 0.9s ease 0.65s both;
+        }
+        .hero-scroll-line {
+            width: 1px;
+            height: 40px;
+            background: rgba(255,255,255,0.25);
+            animation: scrollPulse 2s ease-in-out infinite;
+        }
+
+        @keyframes scrollPulse {
+            0%, 100% { opacity: 0.25; transform: scaleY(1); }
+            50%       { opacity: 0.7;  transform: scaleY(1.3); }
+        }
+
+        /* ─────────────────────────────────────────
+           WHAT WE DO — dark numbered layout
+        ───────────────────────────────────────── */
+        .what-section {
+            background: var(--dark);
+            padding: 8rem 3rem;
+            border-top: 1px solid rgba(255,255,255,0.06);
+        }
+
+        .section-label {
+            font-size: 0.65rem;
+            font-weight: 700;
+            letter-spacing: 0.25em;
+            text-transform: uppercase;
+            color: var(--beige);
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+        .section-label::before {
+            content: '';
+            display: block;
+            width: 28px; height: 1px;
+            background: var(--beige);
+        }
+
+        .what-header {
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+            gap: 2rem;
+            margin-bottom: 5rem;
+            flex-wrap: wrap;
+        }
+
+        .what-title {
+            font-size: clamp(2rem, 4vw, 3.5rem);
+            font-weight: 800;
+            line-height: 1.1;
+            color: var(--white);
+        }
+        .what-title em {
+            font-style: italic;
+            font-family: 'Playfair Display', serif;
+            color: var(--beige);
+        }
+
+        .what-desc {
+            max-width: 340px;
+            font-size: 0.9rem;
+            color: rgba(255,255,255,0.45);
+            line-height: 1.75;
+        }
+
+        .what-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 0;
+            border: 1px solid rgba(255,255,255,0.08);
+        }
+
+        .what-card {
+            padding: 3rem 2.5rem;
+            border-right: 1px solid rgba(255,255,255,0.08);
+            transition: background 0.3s;
+            cursor: default;
+        }
+        .what-card:last-child { border-right: none; }
+        .what-card:hover { background: rgba(103,80,161,0.08); }
+
+        .what-num {
+            font-size: 4rem;
+            font-weight: 900;
+            color: rgba(255,255,255,0.25);
+            line-height: 1;
+            margin-bottom: 2rem;
+            font-variant-numeric: tabular-nums;
+        }
+
+
+
+        .what-card-title {
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: var(--white);
+            margin-bottom: 0.75rem;
+        }
+        .what-card-text {
+            font-size: 0.85rem;
+            color: rgba(255,255,255,0.45);
+            line-height: 1.7;
+        }
+
+        .what-card-arrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-top: 2rem;
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--beige);
+            opacity: 0;
+            transform: translateX(-8px);
+            transition: opacity 0.3s, transform 0.3s;
+        }
+        .what-card:hover .what-card-arrow {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        /* ─────────────────────────────────────────
+           HOUSE OF BRANDS — light section
+        ───────────────────────────────────────── */
+        .brands-section {
+            background: var(--off-white);
+            padding: 8rem 0;
+            color: var(--dark);
+        }
+
+        .brands-header {
+            padding: 0 3rem;
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+            gap: 2rem;
+            margin-bottom: 4rem;
+            flex-wrap: wrap;
+        }
+
+        .brands-title {
+            font-size: clamp(2rem, 4vw, 3.5rem);
+            font-weight: 800;
+            color: var(--dark);
+            line-height: 1.1;
+        }
+        .brands-title span { color: var(--purple); }
+
+        .brands-sub {
+            font-size: 0.85rem;
+            color: rgba(14,14,14,0.4);
+            max-width: 300px;
+            line-height: 1.7;
+        }
+
+        /* carousel — same logic, restyled */
+        .brands-carousel-wrapper {
+            overflow: hidden;
+            -webkit-mask-image: linear-gradient(to right, transparent 0%, black 6%, black 94%, transparent 100%);
+            mask-image: linear-gradient(to right, transparent 0%, black 6%, black 94%, transparent 100%);
+            margin-bottom: 3rem;
+        }
+
+        .brands-carousel-track {
+            display: flex;
+            gap: 1rem;
+            width: max-content;
+            animation: carousel-scroll 35s linear infinite;
+            padding: 1rem 0;
+        }
+        .brands-carousel-track:hover { animation-play-state: paused; }
+
+        @keyframes carousel-scroll {
+            0%   { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+
+        .brand-item {
+            flex: 0 0 150px;
+            height: 150px;
+            background: var(--white);
+            border: 1px solid rgba(14,14,14,0.07);
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1.25rem;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+        }
+        .brand-item:hover {
+            border-color: var(--purple);
+            box-shadow: 0 8px 24px rgba(103,80,161,0.15);
+            transform: translateY(-4px);
+        }
+        .brand-item img {
+            max-width: 100%; max-height: 100%;
+            object-fit: contain;
+        }
+
+        .brands-cta {
+            padding: 0 3rem;
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+        .btn-outline-dark {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            border: 2px solid var(--dark);
+            color: var(--dark);
+            padding: 0.875rem 2rem;
+            border-radius: 100px;
+            text-decoration: none;
+            font-size: 0.8rem;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            transition: all 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+        .btn-outline-dark::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: var(--dark);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.3s ease;
+            z-index: -1;
+        }
+        .btn-outline-dark:hover { color: var(--white); }
+        .btn-outline-dark:hover::before { transform: scaleX(1); }
+
+        .brands-count-text {
+            font-size: 0.75rem;
+            color: rgba(14,14,14,0.35);
+            letter-spacing: 0.05em;
+        }
+
+        /* ─────────────────────────────────────────
+           TASTE N ID — split layout
+        ───────────────────────────────────────── */
+        .taste-section {
+            position: relative;
+            background: var(--mid);
+            padding: 8rem 0;
+            overflow: hidden;
+        }
+
+        .taste-section::before {
+            content: 'TASTE';
+            position: absolute;
+            top: 50%;
+            left: -2rem;
+            transform: translateY(-50%) rotate(-90deg);
+            font-size: 12rem;
+            font-weight: 900;
+            color: rgba(255,255,255,0.02);
+            letter-spacing: 0.2em;
+            user-select: none;
+            pointer-events: none;
+        }
+
+        .taste-inner {
+            position: relative;
+            z-index: 1;
+            padding: 0 3rem;
+        }
+
+        .taste-header {
+            margin-bottom: 3rem;
+        }
+
+        .taste-title {
+            font-size: clamp(2rem, 4vw, 3.5rem);
+            font-weight: 800;
+            color: var(--white);
+            line-height: 1.1;
+            margin-bottom: 1rem;
+        }
+        .taste-title em {
+            font-style: italic;
+            font-family: 'Playfair Display', serif;
+            color: var(--beige);
+        }
+
+        .taste-sub {
+            font-size: 0.9rem;
+            color: rgba(255,255,255,0.4);
+            max-width: 480px;
+            line-height: 1.7;
+        }
+
+        .taste-frame {
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid rgba(255,255,255,0.08);
+        }
+
+        .taste-frame iframe {
+            width: 100%;
+            height: 620px;
+            border: none;
+            display: block;
+            background: transparent;
+        }
+
+        @media (max-width: 768px) {
+            .taste-frame iframe { height: 380px; }
+        }
+
+        /* ─────────────────────────────────────────
+           CONNECT — dark dramatic
+        ───────────────────────────────────────── */
+        .connect-section {
+            position: relative;
+            background: var(--purple-dk);
+            padding: 8rem 3rem;
+            overflow: hidden;
+        }
+
+        .connect-section::before {
+            content: '';
+            position: absolute;
+            top: -200px; right: -200px;
+            width: 600px; height: 600px;
+            background: radial-gradient(circle, rgba(251,175,63,0.12) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        .connect-section::after {
+            content: '';
+            position: absolute;
+            bottom: -150px; left: -100px;
+            width: 500px; height: 500px;
+            background: radial-gradient(circle, rgba(103,80,161,0.3) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .connect-inner {
+            position: relative;
+            z-index: 1;
+        }
+
+        .connect-top {
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+            gap: 3rem;
+            margin-bottom: 5rem;
+            flex-wrap: wrap;
+        }
+
+        .connect-headline {
+            font-size: clamp(2.5rem, 5vw, 5rem);
+            font-weight: 900;
+            line-height: 1;
+            color: var(--white);
+        }
+        .connect-headline span {
+            display: block;
+            font-style: italic;
+            font-family: 'Playfair Display', serif;
+            color: var(--beige);
+        }
+
+        .connect-phone-block { text-align: right; }
+        .connect-phone-label {
+            font-size: 0.65rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: rgba(255,255,255,0.35);
+            margin-bottom: 0.4rem;
+        }
+        .connect-phone-num {
+            font-size: 1.75rem;
+            font-weight: 800;
+            color: var(--white);
+            letter-spacing: 0.02em;
+        }
+        .connect-tagline {
+            font-size: 0.9rem;
+            color: rgba(255,255,255,0.4);
+            margin-top: 0.5rem;
+        }
+
+        .connect-divider {
+            height: 1px;
+            background: rgba(255,255,255,0.1);
+            margin-bottom: 4rem;
+        }
+
+        .connect-cards {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+        }
+
+        .connect-card {
+            position: relative;
+            background: rgba(255,255,255,0.04);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 16px;
+            padding: 2.5rem;
+            text-decoration: none;
+            color: var(--white);
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            overflow: hidden;
+            transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+        .connect-card::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(103,80,161,0.2), transparent);
+            opacity: 0;
+            transition: opacity 0.4s;
+        }
+        .connect-card:hover {
+            border-color: rgba(251,175,63,0.4);
+            transform: translateY(-6px);
+            box-shadow: 0 24px 48px rgba(0,0,0,0.3);
+        }
+        .connect-card:hover::before { opacity: 1; }
+
+        .connect-card-icon {
+            width: 56px; height: 56px;
+            border: 1px solid rgba(255,255,255,0.15);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            z-index: 1;
+        }
+        .connect-card-icon svg { color: var(--beige); }
+
+        .connect-card-body { position: relative; z-index: 1; }
+        .connect-card-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--white);
+            margin-bottom: 0.5rem;
+        }
+        .connect-card-text {
+            font-size: 0.82rem;
+            color: rgba(255,255,255,0.45);
+            line-height: 1.65;
+        }
+
+        .connect-card-cta {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.72rem;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--beige);
+            position: relative;
+            z-index: 1;
+            margin-top: auto;
+            opacity: 0;
+            transform: translateY(4px);
+            transition: opacity 0.3s, transform 0.3s;
+        }
+        .connect-card:hover .connect-card-cta {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* ─────────────────────────────────────────
+           GLOBAL ANIMATIONS
+        ───────────────────────────────────────── */
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(24px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes fadeDown {
+            from { opacity: 0; transform: translateY(-16px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.75s ease, transform 0.75s ease;
+        }
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .reveal-delay-1 { transition-delay: 0.1s; }
+        .reveal-delay-2 { transition-delay: 0.2s; }
+        .reveal-delay-3 { transition-delay: 0.3s; }
+        .reveal-delay-4 { transition-delay: 0.4s; }
+
+        /* ─────────────────────────────────────────
+           RESPONSIVE
+        ───────────────────────────────────────── */
+
+        /* Tablet — 768px to 900px */
+        @media (max-width: 900px) {
+            .what-grid { grid-template-columns: 1fr; }
+            .what-card { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.08); }
+            .what-card:last-child { border-bottom: none; }
+            .connect-cards { grid-template-columns: 1fr; }
+            .what-header { flex-direction: column; align-items: flex-start; }
+            .what-desc { max-width: 100%; }
+            .brands-header { flex-direction: column; align-items: flex-start; }
+            .brands-sub { max-width: 100%; }
+            .connect-top { flex-direction: column; align-items: flex-start; }
+            .connect-phone-block { text-align: left; }
+        }
+
+        /* Phone — up to 640px */
+        @media (max-width: 640px) {
+            .hero-body-wrap { padding: 12vh 1.5rem 0; }
+            .hero-footer { padding: 1.25rem 1.5rem; flex-direction: column; gap: 1rem; align-items: flex-start; }
+            .hero-stats { gap: 1.5rem; }
+            .hero-stat-num { font-size: 1.4rem; }
+            .hero-scroll { display: none; }
+            .what-section, .connect-section { padding: 4rem 1.5rem; }
+            .taste-section { padding: 4rem 0; }
+            .brands-section { padding: 4rem 0; }
+            .brands-header, .brands-cta { padding: 0 1.5rem; }
+            .taste-inner { padding: 0 1.5rem; }
+            .brand-item { flex: 0 0 120px; height: 120px; }
+            .what-card { padding: 2rem 1.5rem; }
+            .connect-section { padding: 4rem 1.5rem; }
+            .connect-cards { gap: 1rem; }
+            .connect-card { padding: 1.75rem; }
+            .taste-frame iframe { height: 320px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ── HERO ──────────────────────────────────── -->
+    <section class="hero">
+        <img
+            src="https://rcxgroup.wpcomstaging.com/wp-content/uploads/2026/01/Webpage-slide-Home-Empty.png"
+            alt="RCX Group"
+            class="hero-bg"
+        >
+
+        <!-- Headline -->
+        <div class="hero-body-wrap">
+<h1 class="hero-headline">
+                We Buy,<br>
+                <em>Create</em> &amp;<br>
+                Operate<br>
+                Iconic F&amp;B Brands
+            </h1>
+            <div class="hero-sub">
+                <p>RCX is a purpose-driven F&amp;B house that brings to life iconic brands through concept creation, strategic investments and hands-on operations.</p>
+                <p>We work with founders, creators, and investors to build soulful dining experiences — from neighbourhood favourites to unforgettable nightlife destinations.</p>
+                <p>Every brand under our care is crafted with intention, powered by culture, and built to last. Our strength lies in blending creativity with operational discipline — turning ideas into living, breathing spaces people fall in love with.</p>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- ── WHAT WE DO ─────────────────────────────── -->
+    <section class="what-section" id="what">
+        <p class="section-label reveal">Our Approach</p>
+        <div class="what-header">
+            <h2 class="what-title reveal reveal-delay-1">
+                What<br>We <em>Do</em>
+            </h2>
+            <p class="what-desc reveal reveal-delay-2">
+                Three pillars that define how we bring F&amp;B brands to life across Asia.
+            </p>
+        </div>
+
+        <div class="what-grid">
+            <div class="what-card reveal reveal-delay-1">
+                <div class="what-num">01</div>
+                <div class="what-card-title">Buy</div>
+                <div class="what-card-text">Partnering with founders and creators to scale excellence — we back the people behind the brand.</div>
+
+            </div>
+
+            <div class="what-card reveal reveal-delay-2">
+                <div class="what-num">02</div>
+                <div class="what-card-title">Create</div>
+                <div class="what-card-text">Crafting unique dining experiences from the ground up — every detail considered, every moment designed.</div>
+
+            </div>
+
+            <div class="what-card reveal reveal-delay-3">
+                <div class="what-num">03</div>
+                <div class="what-card-title">Operate</div>
+                <div class="what-card-text">Hands-on management ensuring consistent quality — operational discipline at every level, every shift.</div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ── HOUSE OF BRANDS ────────────────────────── -->
+    <section class="brands-section" id="brands">
+        <div class="brands-header">
+            <div>
+                <p class="section-label reveal" style="color: var(--purple);">
+                    <span style="background: var(--purple); width:28px; height:1px; display:inline-block; vertical-align:middle; margin-right:0.75rem;"></span>
+                    Portfolio
+                </p>
+                <h2 class="brands-title reveal reveal-delay-1">
+                    House of<br><span>Brands</span>
+                </h2>
+            </div>
+            <p class="brands-sub reveal reveal-delay-2">
+                Iconic F&amp;B brands across Asia — each with a distinct soul, a loyal community, and a reason to exist.
+            </p>
+        </div>
+
+        <!-- Carousel -->
+        <div class="brands-carousel-wrapper">
+            <div class="brands-carousel-track">
+                <div class="brand-item"><img src="https://rcxgroup.wpcomstaging.com/wp-content/uploads/2026/01/Square_Bushido_logo.webp" alt="Bushido"></div>
+                <div class="brand-item"><img src="https://rcxgroup.wpcomstaging.com/wp-content/uploads/2025/12/CommonSpace_logo.png" alt="Common Space"></div>
+                <div class="brand-item"><img src="https://rcxgroup.wpcomstaging.com/wp-content/uploads/2025/12/DancingFish_logo.png" alt="Dancing Fish"></div>
+                <div class="brand-item"><img src="https://rcxgroup.wpcomstaging.com/wp-content/uploads/2025/12/FangKong_logo.png" alt="Fang Kong"></div>
+                <div class="brand-item"><img src="https://rcxgroup.wpcomstaging.com/wp-content/uploads/2025/12/Paperkite_logo.png" alt="Paperkite Chicken &amp; Beer"></div>
+                <div class="brand-item"><img src="https://rcxgroup.wpcomstaging.com/wp-content/uploads/2025/12/Picaro_logo.png" alt="Picaro"></div>
+                <div class="brand-item"><img src="https://rcxgroup.wpcomstaging.com/wp-content/uploads/2025/12/TheRabbitHole_logo.png" alt="The Rabbit Hole"></div>
+                <div class="brand-item"><img src="https://rcxgroup.wpcomstaging.com/wp-content/uploads/2025/12/RamaV_logo.png" alt="Rama V"></div>
+                <div class="brand-item"><img src="https://rcxgroup.wpcomstaging.com/wp-content/uploads/2026/01/Suzie-Wong_logo-new.webp" alt="Suzie Wong"></div>
+                <div class="brand-item"><img src="https://rcxgroup.wpcomstaging.com/wp-content/uploads/2025/12/Taproom_logo.png" alt="Tap Room"></div>
+                <div class="brand-item"><img src="https://rcxgroup.wpcomstaging.com/wp-content/uploads/2025/12/Taptap_logo.png" alt="TAP TAP"></div>
+                <div class="brand-item"><img src="https://rcxgroup.wpcomstaging.com/wp-content/uploads/2025/12/TBF_logo.png" alt="The Beer Factory"></div>
+                <div class="brand-item"><img src="https://rcxgroup.wpcomstaging.com/wp-content/uploads/2025/12/ThaiHouSek_logo.png" alt="Thai Hou Sek"></div>
+                <div class="brand-item"><img src="https://rcxgroup.wpcomstaging.com/wp-content/uploads/2025/12/TheAttic_logo.png" alt="The Attic"></div>
+                <div class="brand-item"><img src="https://rcxgroup.wpcomstaging.com/wp-content/uploads/2026/01/Untitled-design.png" alt="Tono Izakaya"></div>
+                <!-- duplicate -->
+                <div class="brand-item"><img src="https://rcxgroup.wpcomstaging.com/wp-content/uploads/2026/01/Square_Bushido_logo.webp" alt="Bushido"></div>
+                <div class="brand-item"><img src="https://rcxgroup.wpcomstaging.com/wp-content/uploads/2025/12/CommonSpace_logo.png" alt="Common Space"></div>
+                <div class="brand-item"><img src="https://rcxgroup.wpcomstaging.com/wp-content/uploads/2025/12/DancingFish_logo.png" alt="Dancing Fish"></div>
+                <div class="brand-item"><img src="https://rcxgroup.wpcomstaging.com/wp-content/uploads/2025/12/FangKong_logo.png" alt="Fang Kong"></div>
+                <div class="brand-item"><img src="https://rcxgroup.wpcomstaging.com/wp-content/uploads/2025/12/Paperkite_logo.png" alt="Paperkite Chicken &amp; Beer"></div>
+                <div class="brand-item"><img src="https://rcxgroup.wpcomstaging.com/wp-content/uploads/2025/12/Picaro_logo.png" alt="Picaro"></div>
+                <div class="brand-item"><img src="https://rcxgroup.wpcomstaging.com/wp-content/uploads/2025/12/TheRabbitHole_logo.png" alt="The Rabbit Hole"></div>
+                <div class="brand-item"><img src="https://rcxgroup.wpcomstaging.com/wp-content/uploads/2025/12/RamaV_logo.png" alt="Rama V"></div>
+                <div class="brand-item"><img src="https://rcxgroup.wpcomstaging.com/wp-content/uploads/2026/01/Suzie-Wong_logo-new.webp" alt="Suzie Wong"></div>
+                <div class="brand-item"><img src="https://rcxgroup.wpcomstaging.com/wp-content/uploads/2025/12/Taproom_logo.png" alt="Tap Room"></div>
+                <div class="brand-item"><img src="https://rcxgroup.wpcomstaging.com/wp-content/uploads/2025/12/Taptap_logo.png" alt="TAP TAP"></div>
+                <div class="brand-item"><img src="https://rcxgroup.wpcomstaging.com/wp-content/uploads/2025/12/TBF_logo.png" alt="The Beer Factory"></div>
+                <div class="brand-item"><img src="https://rcxgroup.wpcomstaging.com/wp-content/uploads/2025/12/ThaiHouSek_logo.png" alt="Thai Hou Sek"></div>
+                <div class="brand-item"><img src="https://rcxgroup.wpcomstaging.com/wp-content/uploads/2025/12/TheAttic_logo.png" alt="The Attic"></div>
+                <div class="brand-item"><img src="https://rcxgroup.wpcomstaging.com/wp-content/uploads/2026/01/Untitled-design.png" alt="Tono Izakaya"></div>
+            </div>
+        </div>
+
+        <div class="brands-cta">
+            <a href="https://www.rcxgroup.com/brands" class="btn-outline-dark">
+                View All Brands
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </a>
+            <span class="brands-count-text">Our brands across Asia</span>
+        </div>
+    </section>
+
+    <!-- ── TASTE N ID ─────────────────────────────── -->
+    <section class="taste-section" id="taste">
+        <div class="taste-inner">
+            <div class="taste-header">
+                <p class="section-label reveal">Our Collection</p>
+                <h2 class="taste-title reveal reveal-delay-1">
+                    Taste <em>&amp;</em> ID
+                </h2>
+                <p class="taste-sub reveal reveal-delay-2">
+                    Every brand under our care is crafted with intention, powered by culture, and built to last — turning ideas into living, breathing spaces people fall in love with.
+                </p>
+            </div>
+            <div class="taste-frame reveal">
+                <iframe src="https://publuu.com/flip-book/945428/2075607/page/1?embed&nobg=1" scrolling="no" allowfullscreen=""></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── CONNECT ────────────────────────────────── -->
+    <section class="connect-section" id="connect">
+        <div class="connect-inner">
+            <div class="connect-top">
+                <h2 class="connect-headline reveal">
+                    Let's Come
+                    <span>Together</span>
+                </h2>
+                <div class="connect-phone-block reveal reveal-delay-1">
+                    <p class="connect-phone-label">Call us</p>
+                    <p class="connect-phone-num">03 - 8605 - 3000</p>
+                    <p class="connect-tagline">Your journey into the world of F&amp;B begins here</p>
+                </div>
+            </div>
+
+            <div class="connect-divider"></div>
+
+            <div class="connect-cards">
+                <a href="https://www.rcxgroup.com/careers" class="connect-card reveal reveal-delay-1">
+                    <div class="connect-card-body">
+                        <div class="connect-card-title">Career Opportunities</div>
+                        <div class="connect-card-text">Join our team and be part of creating iconic F&amp;B experiences across Asia.</div>
+                    </div>
+                    <div class="connect-card-cta">Explore roles →</div>
+                </a>
+
+                <a href="/contact" class="connect-card reveal reveal-delay-2">
+                    <div class="connect-card-body">
+                        <div class="connect-card-title">General Enquiries</div>
+                        <div class="connect-card-text">Have a question or just want to say hello? We'd love to hear from you.</div>
+                    </div>
+                    <div class="connect-card-cta">Get in touch →</div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Force page to always start at top
+        document.documentElement.scrollTop = 0;
+        document.body.scrollTop = 0;
+        document.addEventListener('DOMContentLoaded', function() {
+            window.scrollTo(0, 0);
+        });
+        window.addEventListener('load', function() {
+            window.scrollTo(0, 0);
+        });
+
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    revealObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+
+        document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+    </script>
+</body>
+</html>
