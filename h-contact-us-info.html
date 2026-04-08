@@ -7,6 +7,7 @@
         --beige:     #E8D0AA;
         --beige-dk:  #D2B679;
         --white:     #ffffff;
+        --off-white: #F8F7F4;
         --dark:      #0E0E0E;
     }
 
@@ -14,13 +15,13 @@
         font-size: clamp(1.5rem, 3vw, 2.5rem);
         font-weight: 800;
         line-height: 1.1;
-        color: var(--white);
+        color: var(--dark);
         margin-bottom: 2.5rem;
     }
     .contact-info-title span {
         font-style: italic;
         font-family: 'Playfair Display', serif;
-        color: var(--beige);
+        color: var(--purple);
     }
 
     .info-block {
@@ -40,17 +41,22 @@
         width: 40px;
         height: 40px;
         flex-shrink: 0;
-        background: rgba(103,80,161,0.15);
-        border: 1px solid rgba(103,80,161,0.3);
+        background: var(--purple-lt, #F0ECF8);
+        border: 1px solid rgba(103,80,161,0.2);
         border-radius: 10px;
         display: flex;
         align-items: center;
         justify-content: center;
         margin-top: 2px;
     }
-    .info-icon svg { color: var(--beige); width: 18px; height: 18px; }
+    .info-icon svg { color: var(--purple); width: 18px; height: 18px; }
 
-    .contact-info { text-align: left; }
+    .contact-info {
+        text-align: left;
+        background: var(--off-white);
+        padding: 3rem;
+        border-radius: 16px;
+    }
 
     .info-text {}
     .info-label {
@@ -58,20 +64,20 @@
         font-weight: 700;
         letter-spacing: 0.18em;
         text-transform: uppercase;
-        color: rgba(255,255,255,0.3);
+        color: rgba(14,14,14,0.35);
         margin-bottom: 0.3rem;
     }
     .info-value {
         font-size: 0.88rem;
-        color: rgba(255,255,255,0.75);
+        color: rgba(14,14,14,0.7);
         line-height: 1.6;
     }
     .info-value a {
-        color: rgba(255,255,255,0.75);
+        color: rgba(14,14,14,0.7);
         text-decoration: none;
         transition: color 0.2s;
     }
-    .info-value a:hover { color: var(--beige); }
+    .info-value a:hover { color: var(--purple); }
 
     .map-links {
         display: flex;
@@ -84,19 +90,19 @@
         align-items: center;
         gap: 0.5rem;
         padding: 0.6rem 1.25rem;
-        border: 1px solid rgba(255,255,255,0.12);
+        border: 1px solid rgba(103,80,161,0.25);
         border-radius: 100px;
         font-size: 0.72rem;
         font-weight: 600;
         letter-spacing: 0.06em;
-        color: rgba(255,255,255,0.6);
+        color: rgba(14,14,14,0.55);
         text-decoration: none;
         transition: border-color 0.25s, color 0.25s, background 0.25s;
     }
     .map-btn:hover {
-        border-color: var(--beige);
-        color: var(--beige);
-        background: rgba(232,208,170,0.06);
+        border-color: var(--purple);
+        color: var(--purple);
+        background: rgba(103,80,161,0.06);
     }
     .map-btn svg { width: 14px; height: 14px; }
 </style>
