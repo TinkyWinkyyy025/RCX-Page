@@ -143,23 +143,11 @@
             z-index: 1;
         }
 
-        .hero-eyebrow {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.75rem;
-            font-size: 0.65rem;
-            font-weight: 700;
-            letter-spacing: 0.25em;
-            text-transform: uppercase;
-            color: var(--beige);
-            margin-top: 1.5rem;
-            margin-bottom: 0;
-        }
-        .hero-eyebrow::before {
-            content: '';
-            width: 28px;
-            height: 2px;
-            background: var(--beige);
+        .hero-title-wrap {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 1.25rem;
         }
 
         .hero-title {
@@ -168,7 +156,6 @@
             line-height: 1.0;
             letter-spacing: -0.02em;
             color: var(--white);
-            margin-bottom: 0;
             max-width: 860px;
         }
         .hero-title em {
@@ -188,8 +175,8 @@
            SECTION UTILITY
         ───────────────────────────────────────── */
         .section-label {
-            font-size: 0.62rem;
-            font-weight: 700;
+            font-size: 0.65rem;
+            font-weight: 400;
             letter-spacing: 0.25em;
             text-transform: uppercase;
             color: var(--beige);
@@ -307,11 +294,10 @@
 
         .values-header {
             display: flex;
-            align-items: flex-end;
-            justify-content: space-between;
-            gap: 2rem;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 1.25rem;
             margin-bottom: 5rem;
-            flex-wrap: wrap;
         }
 
         .values-title {
@@ -438,12 +424,18 @@
             align-items: start;
         }
 
+        .who-title-wrap {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 1.25rem;
+        }
+
         .who-title {
             font-size: clamp(2rem, 4vw, 3.5rem);
             font-weight: 800;
             line-height: 1.1;
             color: var(--dark);
-            margin-bottom: 2rem;
         }
         .who-title span { color: var(--purple); }
         .who-title em {
@@ -455,9 +447,9 @@
         .who-body {
             font-size: 0.9rem;
             color: rgba(14,14,14,0.55);
-            line-height: 1.85;
+            line-height: 1.55;
         }
-        .who-body p + p { margin-top: 1rem; }
+        .who-body p + p { margin-top: 0; }
 
         .who-right {
             display: flex;
@@ -645,8 +637,8 @@
             .values-header { flex-direction: column; align-items: flex-start; }
             .values-desc { max-width: 100%; }
             .values-grid { grid-template-columns: 1fr; }
-            .value-card { border-right: none !important; border-bottom: 1px solid rgba(255,255,255,0.08) !important; }
-            .value-card:last-child { border-bottom: none !important; }
+            .value-card { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.08); }
+            .value-card:last-child { border-bottom: none; }
             .cta-top { flex-direction: column; align-items: flex-start; }
             .cta-contact { text-align: left; }
         }
@@ -659,10 +651,16 @@
 ═══════════════════════════════════════════ -->
 <section class="page-hero">
     <div class="hero-inner">
-        <div class="hero-eyebrow reveal">Our Core Purpose</div>
-        <h1 class="hero-title reveal reveal-delay-1">
-            To Become the Best<br>and <em>Coolest</em> Company<br>to Work With
-        </h1>
+        <p class="section-label reveal">Who We Are</p>
+        <div class="hero-title-wrap">
+            <h1 class="hero-title reveal reveal-delay-1">
+                Built <em>Different</em>
+            </h1>
+            <p class="hero-sub reveal reveal-delay-2">
+                We're building the best and coolest company to work with — for the Avengers of F&amp;B.<br>
+                Fast-moving. Customer-obsessed. Culture-driven.
+            </p>
+        </div>
     </div>
 </section>
 
@@ -671,13 +669,11 @@
 ═══════════════════════════════════════════ -->
 <section class="values-section">
     <div class="values-inner">
+        <p class="section-label reveal">What Drives Us</p>
         <div class="values-header">
-            <div>
-                <p class="section-label reveal">What Drives Us</p>
-                <h2 class="values-title reveal reveal-delay-1">
-                    Our Core <em>Values</em>
-                </h2>
-            </div>
+            <h2 class="values-title reveal reveal-delay-1">
+                Our Core <em>Values</em>
+            </h2>
             <p class="values-desc reveal reveal-delay-2">
                 Five foundational principles that guide every decision, every shift, and every brand under our roof.
             </p>
@@ -687,46 +683,35 @@
 
             <div class="value-card reveal">
                 <div class="value-num">01</div>
-                <div class="value-title">Customer Obsession</div>
-                <div class="value-text">Every decision starts and ends with the customer. We obsess over their experience, comfort, and delight at every touchpoint.</div>
+                <div class="value-title">Move Fast. Own It.</div>
+                <div class="value-text">Speed matters.<br>Progress beats perfection.<br>We take 100% responsibility and figure it out.</div>
             </div>
 
             <div class="value-card reveal reveal-delay-1">
                 <div class="value-num">02</div>
-                <div class="value-title">100% Responsibility</div>
-                <div class="value-text">We own our outcomes — the wins and the losses. Full accountability is not a policy; it's the culture we breathe.</div>
+                <div class="value-title">Customer Obsessed.</div>
+                <div class="value-text">Every role serves someone.<br>Guests. Partners. Teams. Stakeholders.<br>Better service starts with better thinking.</div>
             </div>
 
             <div class="value-card reveal reveal-delay-2">
                 <div class="value-num">03</div>
-                <div class="value-title">Open &amp; Honest Communication</div>
-                <div class="value-text">Transparent dialogue at every level. We say what we mean, hear what is said, and act with integrity.</div>
+                <div class="value-title">Open. Honest. Direct.</div>
+                <div class="value-text">Clarity builds trust.<br>We speak up, solve problems fast, and leave politics out.</div>
             </div>
 
             <div class="value-card reveal">
                 <div class="value-num">04</div>
-                <div class="value-title">Job Scope = Strength + Interest</div>
-                <div class="value-text">We place people in roles that align with their natural strengths and genuine passions — because the best work comes from the best fit.</div>
+                <div class="value-title">Play To Your Strengths.</div>
+                <div class="value-text">Great people do their best work when they care about what they do.</div>
             </div>
 
             <div class="value-card reveal reveal-delay-1">
                 <div class="value-num">05</div>
-                <div class="value-title">Continuous Improvement</div>
-                <div class="value-text">We never settle. Every process, every menu, every guest interaction is an opportunity to be better than yesterday.</div>
+                <div class="value-title">1% Better Everyday.</div>
+                <div class="value-text">We never stay stagnant.<br>Learn fast. Improve fast. Adapt faster.</div>
             </div>
 
 
-        </div>
-    </div>
-</section>
-
-<!-- ═══════════════════════════════════════════
-     VIDEO
-═══════════════════════════════════════════ -->
-<section class="video-section">
-    <div class="video-inner reveal">
-        <div class="video-frame">
-            <iframe src="https://www.youtube.com/embed/4Eb4jOFbMXY" title="RCX Group" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen=""></iframe>
         </div>
     </div>
 </section>
@@ -738,13 +723,13 @@
     <div class="who-inner">
         <div>
             <p class="section-label purple reveal">Est. 1995</p>
-            <h2 class="who-title reveal reveal-delay-1">
-                A Company Built on<br><span><em>Culture &amp; Craft</em></span>
-            </h2>
-            <div class="who-body reveal reveal-delay-2">
-                <p>Founded in 1995, RCX Group has grown from a single concept into one of Asia's most dynamic F&amp;B houses — building brands with soul, brands that endure.</p>
-                <p>We are not just operators. We are storytellers, builders, and believers in the power of a great meal, a great night, and a great brand to change how people feel.</p>
-                <p>Whether it's a Michelin-recognised restaurant, a craft beer microbrewery, or an intimate tapas bar — every brand in our house exists because it deserves to exist.</p>
+            <div class="who-title-wrap">
+                <h2 class="who-title reveal reveal-delay-1">
+                    Culture Builds <span><em>Brands</em></span>
+                </h2>
+                <div class="who-body reveal reveal-delay-2">
+                    <p>Great brands are built by great people.<br>That&rsquo;s why we invest deeply in talent, leadership and growth.</p>
+                </div>
             </div>
         </div>
 

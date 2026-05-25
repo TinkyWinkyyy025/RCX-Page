@@ -143,22 +143,30 @@
             z-index: 1;
         }
 
-        .hero-eyebrow {
+        .section-label {
             display: inline-flex;
             align-items: center;
             gap: 0.6rem;
             font-size: 0.62rem;
-            font-weight: 700;
+            font-weight: 400;
             letter-spacing: 0.25em;
             text-transform: uppercase;
             color: var(--beige);
-            margin-bottom: 1.5rem;
+            margin-bottom: 1rem;
         }
-        .hero-eyebrow::before {
+        .section-label::before {
             content: '';
             width: 24px;
             height: 1px;
             background: var(--beige);
+        }
+
+        .hero-title-wrap {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 1.25rem;
+            margin-bottom: 2.5rem;
         }
 
         .hero-title {
@@ -168,7 +176,6 @@
             line-height: 1.1;
             letter-spacing: -0.01em;
             color: var(--white);
-            margin-bottom: 1.5rem;
         }
         .hero-title em {
             color: var(--beige);
@@ -180,7 +187,6 @@
             color: rgba(255,255,255,0.65);
             line-height: 1.7;
             max-width: 560px;
-            margin-bottom: 2.5rem;
         }
 
         .hero-count {
@@ -257,7 +263,7 @@
            BRANDS GRID
         ───────────────────────────────────────── */
         .brands-section {
-            padding: 4rem 3rem 6rem;
+            padding: 4rem 7rem 6rem;
             max-width: 1400px;
             margin: 0 auto;
         }
@@ -265,7 +271,7 @@
         .brands-grid {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
-            gap: 1.5rem;
+            gap: 2.5rem;
         }
 
         /* Brand Card */
@@ -442,13 +448,15 @@
 ═══════════════════════════════════════════ -->
 <section class="page-hero">
     <div class="hero-inner">
-        <div class="hero-eyebrow reveal">RCX Group</div>
-        <h1 class="hero-title reveal reveal-delay-1">
-            House of <em>Brands</em>
-        </h1>
-        <p class="hero-sub reveal reveal-delay-2">
-            A curated portfolio of iconic F&amp;B concepts — each built with intention, shaped by culture, and designed to endure across Asia.
-        </p>
+        <p class="section-label reveal">RCX Group</p>
+        <div class="hero-title-wrap">
+            <h1 class="hero-title reveal reveal-delay-1">
+                House of <em>Brands</em>
+            </h1>
+            <p class="hero-sub reveal reveal-delay-2">
+                A curated portfolio of iconic F&amp;B concepts — each built with intention, shaped by culture, and designed to endure across Asia.
+            </p>
+        </div>
     </div>
 </section>
 
@@ -499,7 +507,7 @@
         <!-- 4. Fang Kong -->
         <a href="https://rcxgroup.wpcomstaging.com/portfolio/fangkong/" class="brand-card reveal">
             <div class="brand-card-logo">
-                <img src="https://rcxgroup.wpcomstaging.com/wp-content/uploads/2025/12/FangKong_logo.png" alt="Fang Kong">
+                <img src="https://rcxgroup.wpcomstaging.com/wp-content/uploads/2026/05/Fangkong_logo.png" alt="Fang Kong">
             </div>
             <div class="brand-card-body">
                 <div class="brand-card-header">

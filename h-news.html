@@ -69,11 +69,11 @@
 
     .section-label {
         font-size: 0.62rem;
-        font-weight: 700;
+        font-weight: 400;
         letter-spacing: 0.25em;
         text-transform: uppercase;
         color: var(--beige);
-        margin-bottom: 1.25rem;
+        margin-bottom: 1rem;
         display: flex;
         align-items: center;
         gap: 0.75rem;
@@ -86,13 +86,19 @@
         background: var(--beige);
     }
 
+    .hero-title-wrap {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.25rem;
+    }
+
     .hero-title {
         font-size: clamp(3rem, 6.5vw, 5.5rem);
         font-weight: 900;
         line-height: 1.0;
         letter-spacing: -0.02em;
         color: var(--white);
-        margin-bottom: 1.25rem;
         max-width: 800px;
     }
     .hero-title em {
@@ -119,10 +125,12 @@
 <section class="page-hero">
     <div class="hero-inner">
         <p class="section-label reveal">RCX Group</p>
-        <h1 class="hero-title reveal reveal-delay-1">
-            News &amp; <em>Updates</em>
-        </h1>
-        <p class="hero-sub reveal reveal-delay-2">Stories, announcements, and highlights from across the RCX Group.</p>
+        <div class="hero-title-wrap">
+            <h1 class="hero-title reveal reveal-delay-1">
+                News &amp; <em>Updates</em>
+            </h1>
+            <p class="hero-sub reveal reveal-delay-2">Stories, announcements, and highlights from across the RCX Group.</p>
+        </div>
     </div>
 </section>
 
