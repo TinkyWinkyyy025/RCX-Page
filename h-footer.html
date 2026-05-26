@@ -1,9 +1,11 @@
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,700;1,700&display=swap');
 
+    /* ─────────────────────────────────────────
+       SITE FOOTER
+    ───────────────────────────────────────── */
     .site-footer {
         --purple:    #6750A1;
-        --purple-dk: #3E2A6E;
         --beige:     #E8D0AA;
         --white:     #ffffff;
         --off-white: #F8F7F4;
@@ -11,6 +13,8 @@
         --dark-2:    #141414;
         --page-pad:  7rem;
         font-family: 'Montserrat', sans-serif;
+        background: var(--dark-2);
+        border-top: 1px solid rgba(255,255,255,0.06);
         box-sizing: border-box;
     }
     .site-footer *, .site-footer *::before, .site-footer *::after {
@@ -19,14 +23,6 @@
         padding: 0;
     }
 
-        /* ─────────────────────────────────────────
-           SITE FOOTER
-        ───────────────────────────────────────── */
-        .site-footer {
-            background: var(--dark-2);
-            border-top: 1px solid rgba(255,255,255,0.06);
-        }
-
         /* ── Top band ── */
         .footer-top {
             padding: 5rem var(--page-pad) 4rem;
@@ -34,17 +30,6 @@
             grid-template-columns: 1.6fr 1fr 1fr 1fr;
             gap: 3rem;
             border-bottom: 1px solid rgba(255,255,255,0.06);
-        }
-
-        /* Brand column */
-        .footer-brand {}
-
-        .footer-tagline {
-            font-size: 0.82rem;
-            color: rgba(255,255,255,0.4);
-            line-height: 1.75;
-            max-width: 280px;
-            margin-bottom: 2rem;
         }
 
         .footer-socials {
@@ -214,14 +199,6 @@
             transition: color 0.2s;
         }
         .footer-legal a:hover { color: rgba(255,255,255,0.55); }
-
-        .footer-made {
-            font-size: 0.68rem;
-            color: rgba(255,255,255,0.15);
-            letter-spacing: 0.05em;
-            font-style: italic;
-            font-family: 'Playfair Display', serif;
-        }
 
         /* ─────────────────────────────────────────
            RESPONSIVE

@@ -90,13 +90,10 @@
             --purple-dk: #3E2A6E;
             --purple-lt: #F0ECF8;
             --beige:    #E8D0AA;
-            --beige-lt: #FFF5E0;
             --white:     #ffffff;
             --off-white: #F6F4F9;
             --dark:      #0E0E0E;
-            --dark-2:    #1a1a1a;
             --text-body: #5A5472;
-            --card-bg:   #ffffff;
         }
 
         html { scroll-behavior: smooth; }
@@ -122,7 +119,6 @@
         }
         .reveal-delay-1 { transition-delay: 0.08s; }
         .reveal-delay-2 { transition-delay: 0.16s; }
-        .reveal-delay-3 { transition-delay: 0.24s; }
 
         /* ─────────────────────────────────────────
            HERO
@@ -187,76 +183,6 @@
             color: rgba(255,255,255,0.65);
             line-height: 1.7;
             max-width: 560px;
-        }
-
-        .hero-count {
-            display: flex;
-            align-items: center;
-            gap: 2.5rem;
-            flex-wrap: wrap;
-        }
-
-        .hero-stat {
-            display: flex;
-            flex-direction: column;
-            gap: 0.2rem;
-        }
-        .hero-stat-num {
-            font-size: 2rem;
-            font-weight: 800;
-            color: var(--white);
-            line-height: 1;
-        }
-        .hero-stat-num span { color: var(--beige); }
-        .hero-stat-label {
-            font-size: 0.62rem;
-            font-weight: 600;
-            letter-spacing: 0.18em;
-            text-transform: uppercase;
-            color: rgba(255,255,255,0.45);
-        }
-
-        .hero-stat-divider {
-            width: 1px;
-            height: 36px;
-            background: rgba(255,255,255,0.2);
-        }
-
-        /* ─────────────────────────────────────────
-           FILTER BAR
-        ───────────────────────────────────────── */
-        .filter-bar {
-            padding: 2rem 3rem;
-            border-bottom: 1px solid rgba(103,80,161,0.1);
-            background: var(--white);
-            display: flex;
-            align-items: center;
-            gap: 0.75rem;
-            flex-wrap: wrap;
-        }
-
-        .filter-btn {
-            padding: 0.45rem 1.1rem;
-            border-radius: 999px;
-            border: 1px solid rgba(103,80,161,0.2);
-            background: transparent;
-            color: var(--text-body);
-            font-family: 'Montserrat', sans-serif;
-            font-size: 0.72rem;
-            font-weight: 600;
-            letter-spacing: 0.08em;
-            text-transform: uppercase;
-            cursor: pointer;
-            transition: all 0.2s;
-        }
-        .filter-btn:hover {
-            border-color: var(--purple);
-            color: var(--purple);
-        }
-        .filter-btn.active {
-            background: var(--purple);
-            border-color: var(--purple);
-            color: var(--white);
         }
 
         /* ─────────────────────────────────────────
@@ -404,15 +330,6 @@
         }
         .brand-card-arrow svg { width: 12px; height: 12px; }
 
-        /* Locations pill */
-        .brand-card-locations {
-            font-size: 0.6rem;
-            font-weight: 600;
-            letter-spacing: 0.1em;
-            text-transform: uppercase;
-            color: var(--text-body);
-        }
-
         /* ─────────────────────────────────────────
            RESPONSIVE
         ───────────────────────────────────────── */
@@ -420,24 +337,20 @@
             .brands-grid { grid-template-columns: repeat(3, 1fr); }
         }
 
+        @media (max-width: 900px) {
+            .page-hero { padding: 5rem 2rem 4rem; }
+            .brands-section { padding: 3rem 2rem 5rem; }
+        }
+
         @media (max-width: 800px) {
             .brands-grid { grid-template-columns: repeat(2, 1fr); }
         }
 
-        @media (max-width: 900px) {
-            .page-hero { padding: 5rem 2rem 4rem; }
-            .filter-bar { padding: 1.5rem 2rem; }
-            .brands-section { padding: 3rem 2rem 5rem; }
-        }
-
         @media (max-width: 640px) {
             .page-hero { padding: 4rem 1.5rem 3rem; }
-            .hero-count { gap: 1.5rem; }
-            .filter-bar { padding: 1.25rem 1.5rem; }
             .brands-section { padding: 2.5rem 1.5rem 4rem; }
             .brands-grid { grid-template-columns: 1fr; gap: 1rem; }
             .brand-card-logo { aspect-ratio: 1 / 1; }
-            .hero-stat-divider { display: none; }
         }
     </style>
 
