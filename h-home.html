@@ -93,12 +93,12 @@
         ───────────────────────────────────────── */
         .hero {
             position: relative;
-            min-height: 100vh;
+            min-height: 90vh;
             display: grid;
             grid-template-columns: minmax(0, 1fr) auto;
             grid-template-rows: auto 1fr auto;
             gap: 2.5rem 4rem;
-            padding: 15vh max(var(--page-pad), calc((100vw - 1200px) / 2)) calc(4vh + 2rem);
+            padding: 10vh max(var(--page-pad), calc((100vw - 1200px) / 2)) calc(3vh + 1.5rem);
             overflow: visible;
         }
 
@@ -111,7 +111,6 @@
             z-index: 0;
         }
 
-        /* dark gradient overlay */
         .hero::after {
             content: '';
             position: absolute;
@@ -125,7 +124,6 @@
             z-index: 1;
         }
 
-        /* HERO BODY — wrapper is transparent so headline/sub become direct grid items */
         .hero-body-wrap {
             display: contents;
         }
@@ -162,8 +160,10 @@
             animation: fadeUp 0.9s ease 0.5s both;
         }
         .hero-sub p + p { margin-top: 1rem; }
+        .hero-supporting {
+            font-weight: 800;
+        }
 
-        /* HERO STATS PANEL — bottom-left card */
         .hero-footer {
             grid-column: 1;
             grid-row: 3;
@@ -212,28 +212,6 @@
             text-transform: uppercase;
             color: rgba(255,255,255,0.55);
             line-height: 1.3;
-        }
-
-        .hero-scroll {
-            display: flex;
-            align-items: center;
-            gap: 0.75rem;
-            font-size: 0.7rem;
-            letter-spacing: 0.15em;
-            text-transform: uppercase;
-            color: rgba(255,255,255,0.4);
-            animation: fadeUp 0.9s ease 0.65s both;
-        }
-        .hero-scroll-line {
-            width: 1px;
-            height: 40px;
-            background: rgba(255,255,255,0.25);
-            animation: scrollPulse 2s ease-in-out infinite;
-        }
-
-        @keyframes scrollPulse {
-            0%, 100% { opacity: 0.25; transform: scaleY(1); }
-            50%       { opacity: 0.7;  transform: scaleY(1.3); }
         }
 
         /* ─────────────────────────────────────────
@@ -348,6 +326,61 @@
         .what-card:hover .what-card-arrow {
             opacity: 1;
             transform: translateX(0);
+        }
+
+        /* ─────────────────────────────────────────
+           PEOPLE & CAREERS
+        ───────────────────────────────────────── */
+        .people-section {
+            background: var(--mid);
+            color: var(--white);
+            padding: 7rem var(--page-pad);
+        }
+
+        .people-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1.15fr 0.85fr;
+            gap: 5rem;
+            align-items: end;
+        }
+
+        .people-title {
+            max-width: 760px;
+            font-size: clamp(2rem, 4vw, 3.5rem);
+            font-weight: 800;
+            line-height: 1.1;
+            color: var(--white);
+        }
+        .people-title span {
+            color: var(--beige);
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+        }
+
+        .people-copy,
+        .people-secondary-copy {
+            max-width: 650px;
+            margin-top: 1.5rem;
+            font-size: 0.95rem;
+            line-height: 1.75;
+            color: rgba(255,255,255,0.68);
+        }
+
+        .people-cta { margin-top: 2rem; }
+
+        .people-secondary {
+            border-left: 1px solid rgba(255,255,255,0.2);
+            padding-left: 2.5rem;
+        }
+
+        .people-secondary-title {
+            max-width: 360px;
+            font-size: clamp(1.6rem, 2.8vw, 2.5rem);
+            font-weight: 800;
+            line-height: 1.1;
+            color: var(--white);
         }
 
         /* ─────────────────────────────────────────
@@ -475,6 +508,13 @@
         }
         .btn-outline-dark:hover { color: var(--white); }
         .btn-outline-dark:hover::before { transform: scaleX(1); }
+
+        .people-cta {
+            border-color: var(--beige);
+            color: var(--beige);
+        }
+        .people-cta::before { background: var(--beige); }
+        .people-cta:hover { color: var(--purple-dk); }
 
         .brands-count-text {
             font-size: 0.75rem;
@@ -750,7 +790,7 @@
            RESPONSIVE
         ───────────────────────────────────────── */
 
-        /* Tablet — 768px to 900px */
+        /* Tablet - 768px to 900px */
         @media (max-width: 900px) {
             .what-grid { grid-template-columns: 1fr; }
             .what-card { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.12); }
@@ -762,10 +802,19 @@
             .brands-sub { max-width: 100%; }
             .connect-top { flex-direction: column; align-items: flex-start; }
             .connect-phone-block { text-align: left; }
+            .people-inner {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+            .people-secondary {
+                border-left: none;
+                border-top: 1px solid rgba(255,255,255,0.2);
+                padding: 2.5rem 0 0;
+            }
             .hero {
                 grid-template-columns: 1fr;
                 grid-template-rows: auto auto auto;
-                padding: 12vh var(--page-pad) 4vh;
+                padding: 8vh var(--page-pad) 3vh;
             }
             .hero-headline { grid-column: 1; }
             .hero-sub { grid-column: 1; grid-row: 2; }
@@ -780,10 +829,10 @@
             .hero-stat-item { padding: 0.5rem 0.5rem; }
         }
 
-        /* Phone — up to 640px */
+        /* Phone - up to 640px */
         @media (max-width: 640px) {
             :root { --page-pad: 1.5rem; }
-            .hero { padding: 10vh var(--page-pad) 3vh; }
+            .hero { padding: 7vh var(--page-pad) 3vh; }
             .hero-body-wrap { padding: 0; }
             .hero-footer { justify-self: stretch; grid-template-columns: repeat(5, 1fr); gap: 0; padding: 0.9rem 0.15rem; }
             .hero-stat-item { padding: 0.4rem 0.2rem; gap: 0.35rem; }
@@ -792,6 +841,7 @@
             .hero-stat-label { font-size: 0.42rem; letter-spacing: 0.1em; }
             .hero-scroll { display: none; }
             .what-section, .connect-section { padding: 4rem var(--page-pad); }
+            .people-section { padding: 4.5rem var(--page-pad); }
             .taste-section { padding: 4rem 0; }
             .brands-section { padding: 4rem 0; }
             .brands-header, .brands-cta { padding: 0 var(--page-pad); }
@@ -819,17 +869,13 @@
     <section class="hero">
         <img src="https://rcxgroup.wpcomstaging.com/wp-content/uploads/2026/01/Webpage-slide-Home-Empty.png" alt="RCX Group" class="hero-bg">
 
-        <!-- Headline -->
         <div class="hero-body-wrap">
-<h1 class="hero-headline">
-                We Buy,<br>
-                <em>Create</em> &amp; Operate<br>
-                Iconic F&amp;B Brands
+            <h1 class="hero-headline">
+                To Elevate Lives Through <em>Hospitality</em>.
             </h1>
             <div class="hero-sub">
-                <p>RCX is a purpose-driven F&amp;B house that brings to life iconic brands through concept creation, strategic investments and hands-on operations.</p>
-                <p>We work with founders, creators, and investors to build soulful dining experiences — from neighbourhood favourites to unforgettable nightlife destinations.</p>
-                <p>Every brand under our care is crafted with intention, powered by culture, and built to last. Our strength lies in blending creativity with operational discipline — turning ideas into living, breathing spaces people fall in love with.</p>
+                <p class="hero-supporting">We Buy, Create &amp; Operate Iconic F&amp;B Brands.</p>
+                <p>We build brands people love, experiences people remember and careers that help people grow.</p>
             </div>
         </div>
 
@@ -860,7 +906,6 @@
                 <div class="hero-stat-label">Experiences</div>
             </div>
         </div>
-
     </section>
 
     <!-- ── WHAT WE DO ─────────────────────────────── -->
@@ -868,33 +913,52 @@
         <p class="section-label reveal">Our Approach</p>
         <div class="what-header">
             <h2 class="what-title reveal reveal-delay-1">
-                What We <em>Do</em>
+                Hospitality That Makes Life <em>Better</em>
             </h2>
             <p class="what-desc reveal reveal-delay-2">
-                Three pillars that define how we bring F&amp;B brands to life across Asia.
+                RCX is an F&amp;B group built around one belief: hospitality should make life better. We create brands, help strong concepts grow and operate them with care. As RCX grows, we create more opportunities for our people, partners and communities.
             </p>
         </div>
 
         <div class="what-grid">
             <div class="what-card reveal reveal-delay-1">
                 <div class="what-num">01</div>
-                <div class="what-card-title">Buy</div>
-                <div class="what-card-text">Partnering with founders and creators to scale excellence — we back the people behind the brand.</div>
+                <div class="what-card-title">BUY</div>
+                <div class="what-card-text">We invest in strong brands and work with founders to help them grow.</div>
 
             </div>
 
             <div class="what-card reveal reveal-delay-2">
                 <div class="what-num">02</div>
-                <div class="what-card-title">Create</div>
-                <div class="what-card-text">Crafting unique dining experiences from the ground up — every detail considered, every moment designed.</div>
+                <div class="what-card-title">CREATE</div>
+                <div class="what-card-text">We turn ideas into clear concepts and memorable experiences.</div>
 
             </div>
 
             <div class="what-card reveal reveal-delay-3">
                 <div class="what-num">03</div>
-                <div class="what-card-title">Operate</div>
-                <div class="what-card-text">Hands-on management ensuring consistent quality — operational discipline at every level, every shift.</div>
+                <div class="what-card-title">OPERATE</div>
+                <div class="what-card-text">We build the people, systems and standards needed to deliver consistently.</div>
 
+            </div>
+        </div>
+    </section>
+
+    <!-- ── PEOPLE & CAREERS ───────────────────────── -->
+    <section class="people-section" id="careers">
+        <div class="people-inner">
+            <div class="people-primary">
+                <h2 class="people-title">Brands Grow When People <span>Grow</span></h2>
+                <p class="people-copy">The best place to eat should also be the best place to work. We invest in skills, coaching, leadership and career opportunities so our people can grow with RCX.</p>
+                <a href="https://rcxgroup.wpcomstaging.com/join-us/" class="btn-outline-dark people-cta">
+                    Explore Careers
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+                </a>
+            </div>
+
+            <div class="people-secondary">
+                <h3 class="people-secondary-title">Talent Can Come From Anywhere</h3>
+                <p class="people-secondary-copy">Background does not define your ceiling. Your performance does. Through training, work and support, we help people build meaningful careers in hospitality.</p>
             </div>
         </div>
     </section>

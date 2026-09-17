@@ -1,0 +1,309 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RCX Privileges | Shareholder Privilege Card</title>
+    <meta name="description" content="RCX Shareholder Privileges, participating outlets, benefits and terms.">
+    <link rel="icon" href="../favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&amp;family=Playfair+Display:ital,wght@0,700;1,700&amp;display=swap" rel="stylesheet">
+    <style>
+        :root { --purple:#6750a1; --purple-deep:#3e2a6e; --night:#1a132b; --beige:#e8d0aa; --paper:#f8f7f4; --ink:#121016; --muted:#716c77; --line:#d9d3cb; --max:1240px; --radius:16px; }
+        * { box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body { margin:0; background:var(--night); color:#fff; font-family:'Montserrat',Arial,sans-serif; overflow-x:hidden; }
+        a { color:inherit; text-decoration:none; }
+        button, input { font:inherit; }
+        button { cursor:pointer; }
+        .container { width:min(var(--max),calc(100% - 96px)); margin-inline:auto; }
+        .eyebrow { display:inline-flex; align-items:center; gap:12px; color:var(--beige); font-size:10px; font-weight:700; letter-spacing:.22em; text-transform:uppercase; }
+        .eyebrow::before { content:""; width:26px; height:1px; background:currentColor; }
+        .display { margin:0; font-size:clamp(3.5rem,7vw,7rem); line-height:.9; letter-spacing:-.075em; font-weight:700; }
+        .display em, h2 em { color:var(--beige); font-family:'Playfair Display',serif; font-style:italic; }
+        h2 { margin:0; font-size:clamp(2.6rem,5vw,5rem); line-height:.96; letter-spacing:-.07em; }
+        .button { display:inline-flex; align-items:center; justify-content:center; gap:12px; min-height:48px; padding:0 22px; border:1px solid transparent; border-radius:999px; font-size:11px; font-weight:700; letter-spacing:.13em; text-transform:uppercase; transition:transform .2s ease,background .2s ease,border-color .2s ease; }
+        .button-primary { background:var(--beige); color:var(--ink); }
+        .button-primary:hover { background:#f1dbb8; transform:translateY(-2px); }
+        .button-ghost { border-color:rgba(255,255,255,.35); color:#fff; }
+        .button-ghost:hover { border-color:var(--beige); color:var(--beige); transform:translateY(-2px); }
+        .sr-only { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0; }
+
+        .hero { position:relative; min-height:790px; padding:108px 0 86px; background:radial-gradient(circle at 77% 41%,rgba(103,80,161,.45),transparent 28%),linear-gradient(108deg,#211735,#2e2050 60%,#171022); overflow:hidden; }
+        .hero::before { content:""; position:absolute; inset:0; opacity:.16; background-image:linear-gradient(rgba(255,255,255,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.05) 1px,transparent 1px); background-size:52px 52px; mask-image:linear-gradient(90deg,#000,transparent 76%); }
+        .hero-grid { position:relative; z-index:1; display:grid; grid-template-columns:minmax(0,.9fr) minmax(400px,1.1fr); align-items:center; gap:68px; }
+        .hero-title { max-width:650px; margin-top:26px; }
+        .heading-white { color:#fff; }
+        .hero-copy p { max-width:520px; margin:28px 0 0; color:rgba(255,255,255,.72); font-size:16px; line-height:1.75; }
+        .hero-cn { margin-top:16px!important; color:rgba(255,255,255,.55)!important; font-size:14px!important; }
+
+        .card-stage { position:relative; min-height:465px; display:grid; place-items:center; }
+        .card-stage::before,.card-stage::after { content:""; position:absolute; border:1px solid rgba(232,208,170,.2); border-radius:50%; }
+        .card-stage::before { width:480px; height:480px; }
+        .card-stage::after { width:350px; height:350px; border-color:rgba(232,208,170,.12); }
+        .privilege-card-art { position:relative; z-index:2; display:block; width:min(627px,110%); height:auto; filter:drop-shadow(0 36px 35px rgba(0,0,0,.34)); transform:scale(1.1); transition:transform .45s ease; }
+        .card-stage:hover .privilege-card-art { transform:translateY(-8px) scale(1.115); }
+
+        .welcome { padding:112px 0 124px; background:var(--paper); color:var(--ink); }
+        .welcome-grid { display:block; }
+        .section-no { color:var(--purple); font-size:clamp(6rem,16vw,13rem); line-height:.7; font-weight:700; letter-spacing:-.1em; }
+        .welcome-copy { max-width:790px; }
+        .welcome-copy .eyebrow { color:var(--purple); }
+        .welcome-copy h2 { margin:25px 0 22px; }
+        .welcome-copy p { max-width:700px; margin:0; color:#5c5661; font-size:16px; line-height:1.8; }
+        .welcome-copy p + p { margin-top:18px; }
+        .welcome-cn { margin-top:30px!important; padding-top:25px; border-top:1px solid var(--line); }
+        .country-strip { margin-top:70px; padding-top:20px; border-top:1px solid var(--line); color:#5c5661; font-size:11px; font-weight:700; letter-spacing:.14em; text-transform:uppercase; }
+
+        .principles { padding:116px 0 126px; background:var(--purple-deep); }
+        .principles-head { max-width:760px; }
+        .principles h2 { margin-top:23px; }
+        .principles-subtitle { margin:8px 0 24px; color:var(--beige); font-size:22px; letter-spacing:.02em; }
+        .principles-intro { color:rgba(255,255,255,.68); font-size:15px; line-height:1.75; }
+        .principles-intro + .principles-intro { margin-top:10px; }
+        .principles-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1px; margin-top:62px; border-top:1px solid rgba(255,255,255,.17); border-bottom:1px solid rgba(255,255,255,.17); }
+        .principle-group { min-height:390px; padding:27px 25px 30px 0; border-right:1px solid rgba(255,255,255,.17); }
+        .principle-group + .principle-group { padding-left:25px; }
+        .principle-group:last-child { border-right:0; }
+        .group-number { color:var(--beige); font-size:10px; font-weight:700; letter-spacing:.16em; }
+        .principle-language-switch { display:flex; gap:7px; margin-top:18px; }
+        .principles-head .principle-language-switch { margin:23px 0 -38px; position:relative; z-index:2; }
+        .principle-language-switch button { padding:9px 13px; border:1px solid rgba(255,255,255,.3); border-radius:999px; background:transparent; color:rgba(255,255,255,.65); font-size:9px; font-weight:700; letter-spacing:.1em; text-transform:uppercase; transition:background .2s ease,color .2s ease,border-color .2s ease; }
+        .principle-language-switch button:hover { border-color:var(--beige); color:var(--beige); }
+        .principle-language-switch button.active { border-color:var(--beige); background:var(--beige); color:var(--ink); }
+        .principle { margin-top:37px; }
+        .principle + .principle { margin-top:22px; }
+        .principle h3 { margin:0 0 7px; color:#fff; font-size:14px; line-height:1.35; }
+        .principle p { margin:0; color:rgba(255,255,255,.59); font-size:12px; line-height:1.6; }
+        .principle-cn { margin-top:9px; padding-top:9px; border-top:1px solid rgba(255,255,255,.1); }
+        .principle-cn h4 { margin:0 0 5px; color:rgba(255,255,255,.83); font-size:12px; line-height:1.45; font-weight:500; }
+        .principle-cn p { color:rgba(255,255,255,.46); font-size:11px; line-height:1.55; }
+        .language-chinese { display:none; }
+        .language-toggle-group.show-chinese .language-english { display:none; }
+        .language-toggle-group.show-chinese .language-chinese { display:block; }
+        .principles-close { margin-top:34px; color:var(--beige); font-size:14px; line-height:1.7; }
+
+        .outlets { padding:116px 0 124px; background:var(--paper); color:var(--ink); }
+        .outlets-head { display:flex; align-items:end; justify-content:space-between; gap:30px; margin-bottom:47px; }
+        .outlets-head h2 { margin-top:23px; }
+        .outlets-note { max-width:280px; margin:0 0 3px; color:var(--muted); font-size:13px; line-height:1.7; }
+        .filters { display:flex; flex-wrap:wrap; gap:8px; margin-bottom:20px; }
+        .filter { padding:11px 16px; border:1px solid #c9c1b8; border-radius:999px; background:transparent; color:var(--purple-deep); font-size:10px; font-weight:700; letter-spacing:.12em; text-transform:uppercase; }
+        .filter.active,.filter:hover { border-color:var(--purple); background:var(--purple); color:#fff; }
+        .outlet-list { border-top:1px solid #28242b; }
+        .outlet-row { display:grid; grid-template-columns:minmax(0,1fr) 180px; gap:20px; padding:13px 0; border-bottom:1px solid var(--line); font-size:13px; line-height:1.35; }
+        .outlet-row.header { padding:15px 0; background:#28242b; color:#fff; border-bottom:0; font-size:10px; font-weight:700; letter-spacing:.13em; text-transform:uppercase; }
+        .outlet-row.header span:first-child { padding-left:14px; }
+        .outlet-row span:last-child { color:var(--purple-deep); font-weight:700; }
+        .outlet-row.header span:last-child { color:#fff; }
+        .outlet-row.hidden { display:none; }
+        .terms-preview { margin-top:35px; color:#514c56; font-size:12px; line-height:1.7; }
+        .terms-preview strong { color:var(--ink); }
+
+        .terms { padding:116px 0 132px; background:var(--purple-deep); color:#fff; }
+        .terms-grid { display:grid; grid-template-columns:.72fr 1.28fr; gap:90px; }
+        .terms h2 { margin-top:23px; }
+        .terms-note { max-width:260px; margin-top:25px; color:rgba(255,255,255,.68); font-size:13px; line-height:1.7; }
+        .terms-cards { display:grid; grid-template-columns:repeat(2,1fr); gap:12px; }
+        .term-card { min-height:190px; padding:23px 22px 24px; border:1px solid var(--beige); border-radius:var(--radius); background:transparent; color:#fff; }
+        .term-card-number { color:var(--beige); font-size:10px; font-weight:700; letter-spacing:.16em; }
+        .term-card h3 { margin:36px 0 13px; color:#fff; font-size:15px; line-height:1.3; letter-spacing:-.03em; }
+        .term-card ul { margin:0; padding-left:17px; color:rgba(255,255,255,.68); font-size:12px; line-height:1.65; }
+        .term-card li + li { margin-top:6px; }
+
+        .reveal { opacity:0; transform:translateY(22px); transition:opacity .7s ease,transform .7s ease; }
+        .reveal.visible { opacity:1; transform:translateY(0); }
+        @media (max-width:900px) {
+            .container { width:min(var(--max),calc(100% - 48px)); }
+            .hero { min-height:auto; padding:92px 0 75px; }
+            .hero-grid,.terms-grid { grid-template-columns:1fr; gap:48px; }
+            .card-stage { min-height:450px; }
+            .welcome,.principles,.outlets,.terms { padding:88px 0 96px; }
+            .principles-grid { grid-template-columns:repeat(3,1fr); }
+            .principle-group { min-height:450px; }
+            .outlets-head { display:block; }
+            .outlets-note { margin-top:22px; }
+            .terms-grid { gap:40px; }
+        }
+        @media (max-width:640px) {
+            .container { width:calc(100% - 36px); }
+            .hero { padding:78px 0 50px; }
+            .hero-title { font-size:clamp(3.3rem,17vw,5rem); }
+            .hero-copy p { font-size:14px; }
+            .card-stage { min-height:330px; }
+            .card-stage::before { width:300px; height:300px; }
+            .card-stage::after { width:225px; height:225px; }
+            .privilege-card-art { width:121%; max-width:none; margin-left:-10.5%; }
+            .section-no { font-size:6rem; }
+            .welcome-copy p { font-size:14px; }
+            .country-strip { margin-top:48px; line-height:1.8; }
+            .principles-grid { display:block; margin-top:48px; }
+            .principle-group,.principle-group + .principle-group { min-height:auto; padding:24px 0; border-right:0; border-bottom:1px solid rgba(255,255,255,.17); }
+            .principle-group:last-child { border-bottom:0; }
+            .principle { margin-top:28px; }
+            .outlet-row { grid-template-columns:minmax(0,1fr) 105px; gap:12px; font-size:11px; }
+            .outlet-row.header { font-size:9px; }
+            .outlet-row.header span:first-child { padding-left:10px; }
+            .terms-cards { grid-template-columns:1fr; }
+        }
+        @media (prefers-reduced-motion:reduce) { html{scroll-behavior:auto;} *,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important;} .reveal{opacity:1;transform:none;} }
+    </style>
+</head>
+<body>
+<main>
+    <section class="hero" id="welcome">
+        <div class="container hero-grid">
+            <div class="hero-copy reveal visible">
+                <span class="eyebrow">RCX Shareholder Privileges</span>
+                <h1 class="display hero-title"><span class="heading-white">Welcome<br>to</span> <em>RCX</em></h1>
+                <p>Welcome to RCX Privileges — your latest guide to participating outlets, exclusive discounts and benefits available to RCX shareholders.</p>
+                <p class="hero-cn">欢迎使用 RCX 股东礼遇。本页面提供最新的参与门店名单，以及 RCX 股东可享有的专属折扣与礼遇。</p>
+            </div>
+            <div class="card-stage reveal visible">
+                <img class="privilege-card-art" src="https://rcxgroup.wpcomstaging.com/wp-content/uploads/2026/09/RCX_privilege_card.webp" alt="RCX Shareholder Privilege Card and benefits card">
+            </div>
+        </div>
+    </section>
+
+    <section class="welcome" aria-labelledby="welcome-title">
+        <div class="container">
+            <div class="welcome-grid">
+                <div class="welcome-copy">
+                    <span class="eyebrow reveal">A note from RCX</span>
+                    <h2 id="welcome-title" class="reveal">A little more<br><em>in every visit.</em></h2>
+                    <p class="reveal">This page provides the latest list of participating outlets, together with the exclusive discounts and benefits available to RCX shareholders.</p>
+                    <p class="reveal">Participating outlets, discounts, benefits and terms may be updated from time to time. Please check the latest information before your visit.</p>
+                    <p class="welcome-cn reveal">本页面提供最新的参与门店名单，以及 RCX 股东可享有的专属折扣与礼遇。参与门店、折扣、礼遇及相关条款可能不时更新。</p>
+                </div>
+            </div>
+            <div class="country-strip reveal">Malaysia &nbsp;|&nbsp; Singapore &nbsp;|&nbsp; Japan &nbsp;|&nbsp; Myanmar &nbsp;|&nbsp; Philippines</div>
+        </div>
+    </section>
+
+    <section class="principles" id="principles" aria-labelledby="principles-title">
+        <div class="container">
+            <div class="principles-head">
+                <span class="eyebrow reveal">For our investor partners</span>
+                <h2 id="principles-title" class="reveal"><span class="heading-white">Investor Partnership</span><br><em>Principles</em></h2>
+                <div class="principles-subtitle reveal">投资人合作原则</div>
+                <p class="principles-intro reveal">Thank you for your continued trust and support. To help our partnership run smoothly, we'd like to share a few guiding principles:</p>
+                <p class="principles-intro reveal">感谢各位一直以来对我们的信任与支持。为了让彼此的合作更加顺畅愉快,谨与各位分享几项核心原则:</p>
+                <div class="principle-language-switch reveal" role="group" aria-label="Select language for principles 01 to 03">
+                    <button class="active" type="button" data-language="english" aria-pressed="true">English</button>
+                    <button type="button" data-language="chinese" aria-pressed="false">中文</button>
+                </div>
+            </div>
+            <div class="principles-grid">
+                <div class="principle-group language-toggle-group reveal">
+                    <span class="group-number">01 — TRUST &amp; DIRECTION</span>
+                    <article class="principle"><div class="language-english"><h3>Trust the professionals</h3><p>Day-to-day operations, staffing, and management decisions are entrusted to the management team. We'd be grateful for your continued trust and the space to carry these out.</p></div><div class="language-chinese"><div class="principle-cn"><h4>专业分工,彼此信任</h4><p>日常营运、人事与管理决策,交由管理团队全权负责,恳请各位股东给予充分的信任与空间。</p></div></div></article>
+                    <article class="principle"><div class="language-english"><h3>Speak openly, work it out privately</h3><p>Your feedback and ideas are always welcome. Should any disagreement come up, we'd love to work through it together, privately.</p></div><div class="language-chinese"><div class="principle-cn"><h4>坦诚交流,私下商量</h4><p>我们非常欢迎各位随时提出宝贵意见;若有不同看法,建议以私下沟通的方式共同商量,寻求最佳共识。</p></div></div></article>
+                    <article class="principle"><div class="language-english"><h3>Lead with data, not emotion</h3><p>We’d encourage reviewing financial reports regularly and keeping sight of long-term goals, especially through short-term ups and downs.</p></div><div class="language-chinese"><div class="principle-cn"><h4>理性决策,着眼长远</h4><p>建议定期查阅财务报告,掌握营运状况,并以长远目标为重,与团队一起从容应对短期的起伏。</p></div></div></article>
+                </div>
+                <div class="principle-group language-toggle-group reveal">
+                    <span class="group-number">02 — SUPPORT &amp; CONDUCT</span>
+                    <article class="principle"><div class="language-english"><h3>Lend a hand, share in the upside</h3><p>If you're able to lend your expertise or networks to help promote the business, we'd truly appreciate it.</p></div><div class="language-chinese"><div class="principle-cn"><h4>携手助力,共创双赢</h4><p>若各位愿意运用自身的经验与人脉,协助宣传推广、引荐顾客,我们将非常感激。</p></div></div></article>
+                    <article class="principle"><div class="language-english"><h3>Settle up on the spot, on the same day</h3><p>For smooth bookkeeping, we kindly ask that personal spending at the venue be settled on the spot, on the same day (cash, card, or transfer all work).</p></div><div class="language-chinese"><div class="principle-cn"><h4>现场消费,当日结清</h4><p>为方便账务管理,敬请各位股东与宾客在现场消费时当日结清(现金、刷卡或转账皆可)。</p></div></div></article>
+                    <article class="principle"><div class="language-english"><h3>Respect the team</h3><p>We’d ask that intoxicated or disorderly conduct be avoided, and that all staff be treated with respect. Verbal or physical abuse toward staff will not be tolerated.</p></div><div class="language-chinese"><div class="principle-cn"><h4>尊重团队,以礼相待</h4><p>敬请各位股东与宾客避免醉酒失态,并请以礼相待全体员工;任何针对员工的言语或肢体冲突、骚扰行为,我们都无法接受。</p></div></div></article>
+                </div>
+                <div class="principle-group language-toggle-group reveal">
+                    <span class="group-number">03 — STANDARDS &amp; STEWARDSHIP</span>
+                    <article class="principle"><div class="language-english"><h3>No outside food or drinks</h3><p>To help us maintain quality and hygiene standards, we'd ask that outside food or beverages not be brought onto the premises.</p></div><div class="language-chinese"><div class="principle-cn"><h4>谢绝外带饮食</h4><p>为维护场内品质与卫生标准,敬请各位与宾客避免携带外部食品或饮料入场。</p></div></div></article>
+                    <article class="principle"><div class="language-english"><h3>Stay compliant, together</h3><p>We're committed to keeping operations compliant with all relevant laws, and would appreciate your support in upholding this.</p></div><div class="language-chinese"><div class="principle-cn"><h4>依法合规,携手前行</h4><p>我们会确保营运符合相关法律法规,也恳请各位股东一同支持合规经营。</p></div></div></article>
+                    <article class="principle"><div class="language-english"><h3>Protect what we've built</h3><p>We'd ask that all business-related information stay strictly confidential, so we can protect what we're building together.</p></div><div class="language-chinese"><div class="principle-cn"><h4>用心保密,共同守护</h4><p>感谢各位股东对商业相关资讯予以保密,一起守护我们共同经营的成果。</p></div></div></article>
+                </div>
+            </div>
+            <p class="principles-close reveal">Here's to a wonderful partnership ahead!<br>期待与各位携手同行,共创佳绩</p>
+        </div>
+    </section>
+
+    <section class="outlets" id="outlets" aria-labelledby="outlets-title">
+        <div class="container">
+            <div class="outlets-head">
+                <div><span class="eyebrow reveal" style="color:var(--purple)">RCX shareholder benefits</span><h2 id="outlets-title" class="reveal">Participating<br><em>Outlets.</em></h2></div>
+                <p class="outlets-note reveal">Present your Shareholder Privilege Card before payment. Benefits and participating outlets may change from time to time.</p>
+            </div>
+            <div class="filters reveal" role="group" aria-label="Filter outlets by country">
+                <button class="filter active" type="button" data-country="all">All outlets</button>
+                <button class="filter" type="button" data-country="malaysia">Malaysia</button>
+                <button class="filter" type="button" data-country="singapore">Singapore</button>
+                <button class="filter" type="button" data-country="myanmar">Myanmar</button>
+                <button class="filter" type="button" data-country="philippines">Philippines</button>
+            </div>
+            <div class="outlet-list reveal">
+                <div class="outlet-row header"><span>Outlet</span><span>Discount / benefit</span></div>
+                <div class="outlet-row" data-country="malaysia"><span>The Beer Factory Sunway Giza</span><span>20%</span></div>
+                <div class="outlet-row" data-country="malaysia"><span>The Beer Factory Bandar Puteri</span><span>20%</span></div>
+                <div class="outlet-row" data-country="malaysia"><span>The Beer Factory, Sri Hartamas</span><span>20%</span></div>
+                <div class="outlet-row" data-country="malaysia"><span>The Beer Factory, Kiara Bay Kepong</span><span>20%</span></div>
+                <div class="outlet-row" data-country="malaysia"><span>The Beer Factory, Sunway GEO</span><span>20%</span></div>
+                <div class="outlet-row" data-country="malaysia"><span>The Beer Factory, Butterworth</span><span>20%</span></div>
+                <div class="outlet-row" data-country="malaysia"><span>The Beer Factory, Summerton Penang</span><span>20%</span></div>
+                <div class="outlet-row" data-country="malaysia"><span>The Beer Factory, Eco Bloom</span><span>20%</span></div>
+                <div class="outlet-row" data-country="malaysia"><span>The Beer Factory, SS2</span><span>20%</span></div>
+                <div class="outlet-row" data-country="malaysia"><span>The Beer Factory, Rawang</span><span>20%</span></div>
+                <div class="outlet-row" data-country="malaysia"><span>The Beer Factory, Kota Syabandar, Melaka</span><span>N/A</span></div>
+                <div class="outlet-row" data-country="philippines"><span>The Beer Factory - WCC, Manila</span><span>N/A</span></div>
+                <div class="outlet-row" data-country="philippines"><span>The Beer Factory - Greenfield, Manila</span><span>N/A</span></div>
+                <div class="outlet-row" data-country="myanmar"><span>TBF Live, Yangon</span><span>20%</span></div>
+                <div class="outlet-row" data-country="malaysia"><span>Common Space, Kiara Bay Kepong</span><span>20%</span></div>
+                <div class="outlet-row" data-country="malaysia"><span>Suzie Wong</span><span>20% cashback</span></div>
+                <div class="outlet-row" data-country="malaysia"><span>Picaro Spanish Tapas Bar</span><span>20% cashback</span></div>
+                <div class="outlet-row" data-country="singapore"><span>Tono Izakaya, Singapore</span><span>20%</span></div>
+                <div class="outlet-row" data-country="malaysia"><span>The Rabbit Hole, Changkat KL</span><span>20%</span></div>
+                <div class="outlet-row" data-country="japan"><span>The Rabbit Hole, Fukuoka</span><span>N/A</span></div>
+                <div class="outlet-row" data-country="malaysia"><span>Tap Tap, Changkat KL</span><span>20%</span></div>
+                <div class="outlet-row" data-country="malaysia"><span>Tap Tap, Sky Avenue, Genting</span><span>N/A</span></div>
+                <div class="outlet-row" data-country="malaysia"><span>Tap Cave, Sri Hartamas</span><span>20%</span></div>
+                <div class="outlet-row" data-country="malaysia"><span>Tap Room, Bamboo Hill</span><span>20%</span></div>
+                <div class="outlet-row" data-country="malaysia"><span>Tap Room, Bandar Utama</span><span>20%</span></div>
+                <div class="outlet-row" data-country="malaysia"><span>Paperkite Chicken &amp; Beer, Damansara Uptown</span><span>20%</span></div>
+                <div class="outlet-row" data-country="malaysia"><span>Paperkite Chicken &amp; Beer, Bangsar</span><span>20%</span></div>
+                <div class="outlet-row" data-country="malaysia"><span>Rama V, Jalan U-Thant</span><span>20%</span></div>
+                <div class="outlet-row" data-country="malaysia"><span>Dancing Fish, Bangsar Shopping Centre</span><span>20%</span></div>
+                <div class="outlet-row" data-country="malaysia"><span>Dancing Fish, The Campus</span><span>20%</span></div>
+                <div class="outlet-row" data-country="malaysia"><span>Thai Hou Sek, One Utama</span><span>20%</span></div>
+                <div class="outlet-row" data-country="malaysia"><span>Thai Hou Sek, The Hub SS2</span><span>20%</span></div>
+                <div class="outlet-row" data-country="malaysia"><span>The World of Hanging Gardens, Conlay by E&amp;O</span><span>20%</span></div>
+            </div>
+            <p class="terms-preview reveal"><strong>Quick reminder:</strong> Privileges are exclusively reserved for registered cardholders and are non-transferable. Applicable for both dine-in and takeaway, subject to outlet terms.</p>
+        </div>
+    </section>
+
+    <section class="terms" id="terms" aria-labelledby="terms-title">
+        <div class="container terms-grid">
+            <div><span class="eyebrow reveal" style="color:var(--beige)">The important details</span><h2 id="terms-title" class="reveal"><span class="heading-white">Terms &amp;</span><br><em>Conditions.</em></h2><p class="terms-note reveal">Participating outlets, discounts, benefits and terms may be updated from time to time.</p></div>
+            <div class="terms-cards reveal">
+                <article class="term-card primary"><span class="term-card-number">01 — SHOW YOUR CARD</span><h3>Card eligibility</h3><ul><li>Present the Shareholder Privilege Card before payment.</li><li>For registered cardholders only. Non-transferable.</li></ul></article>
+                <article class="term-card"><span class="term-card-number">02 — WHERE IT APPLIES</span><h3>Using your benefit</h3><ul><li>Applicable for dine-in and takeaway.</li><li>Not applicable on promotions, discounted items or merchandise.</li></ul></article>
+                <article class="term-card"><span class="term-card-number">03 — EXCLUDED ITEMS</span><h3>What is not included</h3><ul><li>Alcoholic items at Rama V and Thai Hou Sek outlets are excluded.</li><li>Cigarettes and other excluded products are not covered.</li></ul></article>
+                <article class="term-card"><span class="term-card-number">04 — SPECIAL DAYS</span><h3>Holiday reminders</h3><ul><li>Not applicable on the eve of public holidays.</li><li>Also excluded on Father’s Day, Mother’s Day and Valentine’s Day at Restaurants &amp; Cafes Division outlets.</li></ul></article>
+            </div>
+        </div>
+    </section>
+</main>
+
+<script>
+    const revealObserver = new IntersectionObserver(entries => entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('visible'); revealObserver.unobserve(entry.target); } }), { threshold:.08, rootMargin:'0px 0px -35px 0px' });
+    document.querySelectorAll('.reveal:not(.visible)').forEach(element => revealObserver.observe(element));
+
+    document.querySelectorAll('.filter').forEach(filter => filter.addEventListener('click', () => {
+        const country = filter.dataset.country;
+        document.querySelectorAll('.filter').forEach(item => item.classList.toggle('active', item === filter));
+        document.querySelectorAll('.outlet-row:not(.header)').forEach(row => row.classList.toggle('hidden', country !== 'all' && row.dataset.country !== country));
+    }));
+
+    document.querySelectorAll('.principle-language-switch button').forEach(button => button.addEventListener('click', () => {
+        const groups = document.querySelectorAll('.language-toggle-group');
+        const switcher = button.closest('.principle-language-switch');
+        const chinese = button.dataset.language === 'chinese';
+        groups.forEach(group => group.classList.toggle('show-chinese', chinese));
+        switcher.querySelectorAll('button').forEach(item => {
+            const active = item === button;
+            item.classList.toggle('active', active);
+            item.setAttribute('aria-pressed', String(active));
+        });
+    }));
+
+</script>
+</body>
+</html>
