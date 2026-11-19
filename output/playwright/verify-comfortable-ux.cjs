@@ -1,0 +1,27 @@
+const pw=require('playwright'),fs=require('node:fs'),assert=require('node:assert/strict');
+const engine=process.env.RCX_QA_ENGINE||'chromium',base=process.env.RCX_QA_URL||'http://127.0.0.1:8123';
+(async()=>{const b=await pw[engine].launch(engine==='chromium'?{channel:'chrome'}:{}),c=await b.newContext({reducedMotion:'no-preference'});await c.route('**/*',r=>new URL(r.request().url()).origin===new URL(base).origin?r.continue():r.abort());const p=await c.newPage(),errors=[];p.on('pageerror',e=>errors.push(e.message));
+for(const [width,height]of[[320,568],[375,812],[844,390],[1280,900]]){
+ await p.setViewportSize({width,height});await p.goto(base);await p.evaluate(()=>document.fonts.ready);
+ const toggle=p.locator('[data-carousel-toggle]'),track=p.locator('.brands-carousel-track');await toggle.scrollIntoViewIfNeeded();await p.waitForFunction(()=>document.querySelector('.brands-carousel-track').classList.contains('is-running'));
+ await toggle.click();assert.equal(await toggle.textContent(),'Play');assert.equal(await track.evaluate(e=>getComputedStyle(e).animationPlayState),'paused');
+ await toggle.click();assert.equal(await toggle.textContent(),'Pause');assert.ok(await track.evaluate(e=>e.classList.contains('is-running')));
+ assert.ok(await p.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),'home overflow '+width);
+ if(width===375)await p.locator('.brands-cta').screenshot({path:`output/playwright/comfortable-carousel-${engine}.png`});
+ await p.emulateMedia({reducedMotion:'reduce'});await toggle.waitFor({state:'hidden'});assert.equal(await track.evaluate(e=>getComputedStyle(e).animationName),'none');
+ await p.emulateMedia({reducedMotion:'no-preference'});
+ const menu=p.locator('.menu-toggle');if(await menu.isVisible()) {await p.evaluate(()=>scrollTo({top:0,behavior:'instant'}));await menu.click();assert.equal(await menu.getAttribute('aria-expanded'),'true');await p.keyboard.press('Escape');assert.equal(await menu.getAttribute('aria-expanded'),'false');}
+}
+// Validate gallery loading without replacing the current photo with a blank frame.
+const data=JSON.parse(fs.readFileSync('brand-data.json','utf8'))['fangkong'];let release;const hold=new Promise(r=>release=r);let held=false;
+await p.route('**'+data.gallery[1],async r=>{held=true;await hold;await r.continue()});
+await p.setViewportSize({width:375,height:812});await p.goto(base+'/portfolio/fangkong/');await p.locator('[data-brand-photo]').first().click();await p.waitForFunction(()=>document.querySelector('[data-brand-enlarged]').getAttribute('aria-busy')==='false');
+const first=await p.locator('[data-brand-enlarged]').getAttribute('src');await p.locator('[data-brand-next]').click();await p.waitForFunction(()=>document.querySelector('[data-brand-enlarged]').getAttribute('aria-busy')==='true');assert.equal(await p.locator('[data-brand-enlarged]').getAttribute('src'),first);release();await p.waitForFunction(()=>document.querySelector('[data-brand-enlarged]').getAttribute('aria-busy')==='false');assert.ok(held);assert.ok((await p.locator('[data-brand-counter]').textContent()).startsWith('2 /'));
+await p.keyboard.press('ArrowRight');await p.keyboard.press('ArrowRight');await p.keyboard.press('ArrowRight');await p.waitForFunction(()=>document.querySelector('[data-brand-enlarged]').getAttribute('aria-busy')==='false');assert.ok((await p.locator('[data-brand-counter]').textContent()).startsWith('5 /'),'latest photo request wins');
+await p.keyboard.press('Escape');await p.waitForFunction(()=>document.body.style.overflow==='');
+// Form pending and success feedback use a mock response, never a live message.
+let send;const response=new Promise(r=>send=r);await p.route('https://api.web3forms.com/**',async r=>{await response;await r.fulfill({json:{success:true}})});await p.goto(base+'/contact-us/');
+await p.locator('#contact-name').fill('Responsive QA');await p.locator('#contact-email').fill('qa@example.com');await p.locator('#contact-contact').fill('0123456789');await p.locator('#contact-enquiry_subject').fill('Layout QA');await p.locator('#contact-message').fill('Mocked browser test only.');await p.locator('.rcx-form__submit').click();await p.waitForFunction(()=>document.querySelector('.rcx-form').getAttribute('aria-busy')==='true');assert.ok((await p.locator('.rcx-form__status').textContent()).includes('Sending'));assert.notEqual(await p.locator('.rcx-form__submit').evaluate(e=>getComputedStyle(e,'::before').animationName),'none');send();await p.waitForFunction(()=>document.querySelector('.rcx-form__status').dataset.state==='success');
+// Larger type must never be cropped in expanded job content.
+await p.goto(base+'/join-us/');await p.emulateMedia({reducedMotion:'reduce'});await p.addStyleTag({content:'html{font-size:200% !important}'});await p.locator('.job-card-header').first().click();assert.ok(await p.locator('.job-card.open .job-card-body').evaluate(e=>e.scrollHeight<=e.clientHeight+1));
+const plain=await b.newContext({javaScriptEnabled:false}),n=await plain.newPage();await n.goto(base);assert.equal(await n.locator('.brands-carousel-track').evaluate(e=>getComputedStyle(e).animationPlayState),'paused');assert.equal(await n.locator('[data-carousel-toggle]').isVisible(),false);await plain.close();assert.deepEqual(errors,[]);console.log(JSON.stringify({engine,base,viewportChecks:4,delayedPhoto:true,rapidPhotoNavigation:true,mockedForm:true,largeType:true,noJS:true,errors}));await b.close();})().catch(e=>{console.error(e);process.exit(1)});

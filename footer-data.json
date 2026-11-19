@@ -1,0 +1,18 @@
+{
+  "logo": "/images/logos/OTHERS-25-037_RCX Rebrand-OL-Logo 2_Horizontal-White.webp",
+  "company": "Rhombus Connexion Sdn. Bhd.",
+  "registration": "201501022077 (1147405-K)",
+  "navigation": [
+    {"label": "Company", "links": [{"label": "About Us", "href": "/about-us/"}, {"label": "News & Updates", "href": "/news/"}]},
+    {"label": "Our brands", "links": [{"label": "Portfolio", "href": "/portfolio/"}]},
+    {"label": "Connect", "links": [{"label": "Join Us", "href": "/join-us/"}, {"label": "Contact Us", "href": "/contact-us/"}]}
+  ],
+  "contacts": [
+    {"label": "Telephone", "lines": ["+603 5882 0108"], "href": "tel:+60358820108"},
+    {"label": "Email", "lines": ["info@rcxgroup.com"], "href": "mailto:info@rcxgroup.com"},
+    {"label": "Fax", "lines": ["+603 5879 7135"]},
+    {"label": "Head office", "lines": ["E-6-6, Block E, SetiaWalk,", "Persiaran Wawasan, Pusat Bandar Puchong,", "47160 Puchong, Selangor."], "address": true}
+  ],
+  "socials": [],
+  "legal": []
+}

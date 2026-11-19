@@ -1,0 +1,1111 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><style>@view-transition{navigation:auto}@media(prefers-reduced-motion:reduce),print{@view-transition{navigation:none}}</style><title>RCX Group | Hospitality across Asia</title><link rel="preload" href="/fonts/Gotham%20Medium%20Regular.woff2" as="font" type="font/woff2" crossorigin><noscript><style>.portfolio-toggle{display:none!important}</style></noscript>
+    
+    
+    <meta name="description" content="RCX Group is a purpose-driven F&amp;B house founded in 1995, bringing iconic dining and nightlife brands to life across Asia through concept creation, strategic investments, and hands-on operations. Based in Puchong, Selangor, Malaysia.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.rcxgroup.com/">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="RCX Group">
+    <meta property="og:url" content="https://www.rcxgroup.com/">
+    <meta property="og:title" content="RCX Group | We Buy, Create and Operate Iconic F&amp;B Brands">
+    <meta property="og:description" content="RCX Group is a purpose-driven F&amp;B house founded in 1995, bringing iconic dining and nightlife brands to life across Asia through concept creation, strategic investments, and hands-on operations.">
+    <meta property="og:image" content="/images/hero/home-clean.webp">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="RCX Group | We Buy, Create and Operate Iconic F&amp;B Brands">
+    <meta name="twitter:description" content="RCX Group is a purpose-driven F&amp;B house bringing iconic dining and nightlife brands to life across Asia.">
+    <meta name="twitter:image" content="/images/hero/home-clean.webp">
+
+    
+
+    <!-- Structured Data: Organization -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "RCX Group",
+      "legalName": "Rhombus Connexion Sdn. Bhd.",
+      "url": "https://www.rcxgroup.com",
+      "foundingDate": "1995",
+      "description": "RCX Group is a purpose-driven F&B house bringing iconic brands to life across Asia through concept creation, strategic investments, and hands-on operations.",
+      "telephone": "+60358820108",
+      "email": "info@rcxgroup.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "E-6-6, Block E, SetiaWalk, Persiaran Wawasan",
+        "addressLocality": "Pusat Bandar Puchong",
+        "postalCode": "47160",
+        "addressRegion": "Selangor",
+        "addressCountry": "MY"
+      },
+      "areaServed": "Asia",
+      "sameAs": []
+    }
+    </script>
+
+    <!-- Structured Data: WebSite -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "RCX Group",
+      "url": "https://www.rcxgroup.com",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://www.rcxgroup.com/?s={search_term_string}"
+        },
+        "query-input": "required name=search_term_string"
+      }
+    }
+    </script>
+    <style>
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --purple:    #6750A1;
+            --purple-dk: #3E2A6E;
+            --beige:    #E8D0AA;
+            --beige-dk: #D2B679;
+            --white:     #ffffff;
+            --off-white: #F8F7F4;
+            --dark:      #0E0E0E;
+            --mid:       #1A1A2E;
+            --page-pad:  3rem;
+        }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: var(--dark);
+            color: var(--white);
+            overflow-x: hidden;
+        }
+
+        /* ─────────────────────────────────────────
+           HERO
+        ───────────────────────────────────────── */
+        .hero {
+            position: relative;
+            min-height: 90vh;
+            display: grid;
+            grid-template-columns: minmax(0, 1fr) auto;
+            grid-template-rows: auto 1fr auto;
+            gap: 2.5rem 4rem;
+            padding: 10vh max(var(--page-pad), calc((100vw - 1200px) / 2)) calc(3vh + 1.5rem);
+            overflow: visible;
+        }
+
+        .hero-bg {
+            position: absolute;
+            inset: 0;
+            width: 100%; height: 100%;
+            object-fit: cover;
+            filter: brightness(0.45);
+            z-index: 0;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(
+                to bottom,
+                rgba(14,14,14,0.3) 0%,
+                rgba(14,14,14,0.1) 40%,
+                rgba(14,14,14,0.7) 100%
+            );
+            z-index: 1;
+        }
+
+        .hero-body-wrap {
+            display: contents;
+        }
+
+        .hero-headline {
+            grid-column: 1 / -1;
+            grid-row: 1;
+            position: relative;
+            z-index: 10;
+            font-size: clamp(2.8rem, 6vw, 5.5rem);
+            font-weight: 900;
+            line-height: 1.0;
+            letter-spacing: -0.02em;
+            color: var(--white);
+            margin-bottom: 0;
+            animation: fadeUp 0.9s ease 0.35s both;
+        }
+        .hero-headline em {
+            font-style: italic;
+            font-family: 'Playfair Display', serif;
+            color: var(--beige);
+        }
+
+        .hero-sub {
+            grid-column: 1;
+            grid-row: 2;
+            align-self: end;
+            position: relative;
+            z-index: 10;
+            font-size: 0.95rem;
+            color: rgba(255,255,255,0.7);
+            line-height: 1.75;
+            max-width: 700px;
+            animation: fadeUp 0.9s ease 0.5s both;
+        }
+        .hero-sub p + p { margin-top: 1rem; }
+        .hero-supporting {
+            font-weight: 800;
+        }
+
+        .hero-footer {
+            grid-column: 1;
+            grid-row: 3;
+            align-self: end;
+            justify-self: start;
+            position: relative;
+            z-index: 10;
+            display: grid;
+            grid-template-columns: repeat(5, auto);
+            background: rgba(0, 0, 0, 0.55);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 8px;
+            padding: 1.25rem 0.5rem;
+            animation: fadeUp 0.9s ease 0.65s both;
+        }
+
+        .hero-stat-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: 0.6rem;
+            padding: 0.5rem 1.5rem;
+            border-right: 1px solid rgba(255,255,255,0.1);
+        }
+        .hero-stat-item:last-child { border-right: none; }
+
+        .hero-stat-icon {
+            width: 28px;
+            height: 28px;
+            color: rgba(180, 160, 230, 0.85);
+        }
+
+        .hero-stat-num {
+            font-size: 1.3rem;
+            font-weight: 800;
+            color: var(--white);
+            line-height: 1;
+            letter-spacing: 0.01em;
+        }
+        .hero-stat-label {
+            font-size: 0.6rem;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: rgba(255,255,255,0.55);
+            line-height: 1.3;
+        }
+
+        /* ─────────────────────────────────────────
+           WHAT WE DO — light purple layout
+        ───────────────────────────────────────── */
+        .what-section {
+            background: #3E2A6E;
+            padding: 8rem var(--page-pad);
+            border-top: 1px solid rgba(255,255,255,0.08);
+        }
+        .what-section > * { max-width: 1200px; margin-left: auto; margin-right: auto; }
+
+        .section-label {
+            font-size: 0.65rem;
+            font-weight: 400;
+            letter-spacing: 0.25em;
+            text-transform: uppercase;
+            color: var(--beige);
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+        .section-label::before {
+            content: '';
+            display: block;
+            width: 28px; height: 1px;
+            background: var(--beige);
+        }
+        .section-label.purple { color: var(--purple); }
+        .section-label.purple::before { background: var(--purple); }
+
+        .what-header {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 1.25rem;
+            margin-bottom: 5rem;
+        }
+
+        .what-title {
+            font-size: clamp(2rem, 4vw, 3.5rem);
+            font-weight: 800;
+            line-height: 1.1;
+            color: var(--white);
+        }
+        .what-title em {
+            font-style: italic;
+            font-family: 'Playfair Display', serif;
+            color: var(--beige);
+        }
+
+        .what-desc {
+            font-size: 0.9rem;
+            color: rgba(255,255,255,0.55);
+            line-height: 1.75;
+        }
+
+        .what-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 0;
+            border: 1px solid rgba(255,255,255,0.12);
+        }
+
+        .what-card {
+            padding: 3rem 2.5rem;
+            border-right: 1px solid rgba(255,255,255,0.12);
+            transition: background 0.3s;
+            cursor: default;
+        }
+        .what-card:last-child { border-right: none; }
+        .what-card:hover { background: rgba(255,255,255,0.06); }
+
+        .what-num {
+            font-size: 4rem;
+            font-weight: 900;
+            color: rgba(255,255,255,0.2);
+            line-height: 1;
+            margin-bottom: 2rem;
+            font-variant-numeric: tabular-nums;
+        }
+
+
+
+        .what-card-title {
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: var(--white);
+            margin-bottom: 0.75rem;
+        }
+        .what-card-text {
+            font-size: 0.85rem;
+            color: rgba(255,255,255,0.55);
+            line-height: 1.7;
+        }
+
+        .what-card-arrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-top: 2rem;
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--beige);
+            opacity: 0;
+            transform: translateX(-8px);
+            transition: opacity 0.3s, transform 0.3s;
+        }
+        .what-card:hover .what-card-arrow {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        /* ─────────────────────────────────────────
+           PEOPLE & CAREERS
+        ───────────────────────────────────────── */
+        .people-section {
+            background: var(--mid);
+            color: var(--white);
+            padding: 7rem var(--page-pad);
+        }
+
+        .people-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1.15fr 0.85fr;
+            gap: 5rem;
+            align-items: end;
+        }
+
+        .people-title {
+            max-width: 760px;
+            font-size: clamp(2rem, 4vw, 3.5rem);
+            font-weight: 800;
+            line-height: 1.1;
+            color: var(--white);
+        }
+        .people-title span {
+            color: var(--beige);
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+        }
+
+        .people-copy,
+        .people-secondary-copy {
+            max-width: 650px;
+            margin-top: 1.5rem;
+            font-size: 0.95rem;
+            line-height: 1.75;
+            color: rgba(255,255,255,0.68);
+        }
+
+        .people-cta { margin-top: 2rem; }
+
+        .people-secondary {
+            border-left: 1px solid rgba(255,255,255,0.2);
+            padding-left: 2.5rem;
+        }
+
+        .people-secondary-title {
+            max-width: 360px;
+            font-size: clamp(1.6rem, 2.8vw, 2.5rem);
+            font-weight: 800;
+            line-height: 1.1;
+            color: var(--white);
+        }
+
+        /* ─────────────────────────────────────────
+           HOUSE OF BRANDS — light section
+        ───────────────────────────────────────── */
+        .brands-section {
+            background: var(--off-white);
+            padding: 8rem 0;
+            color: var(--dark);
+        }
+
+        .brands-header {
+            padding: 0 var(--page-pad);
+            margin: 0 auto 4rem;
+            max-width: calc(1200px + var(--page-pad) * 2);
+        }
+
+        .brands-title-wrap {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 1.25rem;
+        }
+
+        .brands-title {
+            font-size: clamp(2rem, 4vw, 3.5rem);
+            font-weight: 800;
+            color: var(--dark);
+            line-height: 1.1;
+        }
+        .brands-title span {
+            color: var(--purple);
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+        }
+
+        .brands-sub {
+            font-size: 0.85rem;
+            color: rgba(14,14,14,0.4);
+            max-width: 520px;
+            line-height: 1.7;
+        }
+
+        /* carousel — same logic, restyled */
+        .brands-carousel-wrapper {
+            overflow: hidden;
+            -webkit-mask-image: linear-gradient(to right, transparent 0%, black 6%, black 94%, transparent 100%);
+            mask-image: linear-gradient(to right, transparent 0%, black 6%, black 94%, transparent 100%);
+            margin-bottom: 3rem;
+        }
+
+        .brands-carousel-track {
+            display: flex;
+            gap: 1rem;
+            width: max-content;
+            animation: carousel-scroll 35s linear infinite;
+            padding: 1rem 0;
+        }
+        .brands-carousel-track:hover { animation-play-state: paused; }
+
+        @keyframes carousel-scroll {
+            0%   { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+
+        .brand-item {
+            flex: 0 0 150px;
+            height: 150px;
+            background: var(--white);
+            border: 1px solid rgba(14,14,14,0.07);
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1.25rem;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+        }
+        .brand-item:hover {
+            border-color: var(--purple);
+            box-shadow: 0 8px 24px rgba(103,80,161,0.15);
+            transform: translateY(-4px);
+        }
+        .brand-item img {
+            max-width: 100%; max-height: 100%;
+            object-fit: contain;
+        }
+
+        .brands-cta {
+            padding: 0 var(--page-pad);
+            margin: 0 auto;
+            max-width: calc(1200px + var(--page-pad) * 2);
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+        .btn-outline-dark {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            border: 2px solid var(--dark);
+            color: var(--dark);
+            padding: 0.875rem 2rem;
+            border-radius: 100px;
+            text-decoration: none;
+            font-size: 0.8rem;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            transition: all 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+        .btn-outline-dark::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: var(--dark);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.3s ease;
+            z-index: -1;
+        }
+        .btn-outline-dark:hover { color: var(--white); }
+        .btn-outline-dark:hover::before { transform: scaleX(1); }
+
+        .people-cta {
+            border-color: var(--beige);
+            color: var(--beige);
+        }
+        .people-cta::before { background: var(--beige); }
+        .people-cta:hover { color: var(--purple-dk); }
+
+        .brands-count-text {
+            font-size: 0.75rem;
+            color: rgba(14,14,14,0.35);
+            letter-spacing: 0.05em;
+        }
+
+        /* ─────────────────────────────────────────
+           TASTE N ID — split layout
+        ───────────────────────────────────────── */
+        .taste-section {
+            position: relative;
+            background: var(--mid);
+            padding: 8rem 0;
+            overflow: hidden;
+        }
+
+        .taste-section::before {
+            content: 'TASTE';
+            position: absolute;
+            top: 50%;
+            left: -2rem;
+            transform: translateY(-50%) rotate(-90deg);
+            font-size: 12rem;
+            font-weight: 900;
+            color: rgba(255,255,255,0.02);
+            letter-spacing: 0.2em;
+            user-select: none;
+            pointer-events: none;
+        }
+
+        .taste-inner {
+            position: relative;
+            z-index: 1;
+            padding: 0 var(--page-pad);
+            margin: 0 auto;
+            max-width: calc(1200px + var(--page-pad) * 2);
+        }
+
+        .taste-header {
+            margin-bottom: 3rem;
+        }
+
+        .taste-title-wrap {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 1.25rem;
+        }
+
+        .taste-title {
+            font-size: clamp(2rem, 4vw, 3.5rem);
+            font-weight: 800;
+            color: var(--white);
+            line-height: 1.1;
+        }
+        .taste-title em {
+            font-style: italic;
+            font-family: 'Playfair Display', serif;
+            color: var(--beige);
+        }
+
+        .taste-sub {
+            font-size: 0.9rem;
+            color: rgba(255,255,255,0.4);
+            max-width: 480px;
+            line-height: 1.7;
+        }
+
+        .taste-frame {
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid rgba(255,255,255,0.08);
+        }
+
+        .taste-frame iframe {
+            width: 100%;
+            height: 620px;
+            border: none;
+            display: block;
+            background: transparent;
+        }
+
+        @media (max-width: 768px) {
+            .taste-frame iframe { height: 380px; }
+        }
+
+        /* ─────────────────────────────────────────
+           CONNECT — dark dramatic
+        ───────────────────────────────────────── */
+        .connect-section {
+            position: relative;
+            background: var(--purple-dk);
+            padding: 8rem var(--page-pad);
+            overflow: hidden;
+        }
+
+        .connect-section::before {
+            content: '';
+            position: absolute;
+            top: -200px; right: -200px;
+            width: 600px; height: 600px;
+            background: radial-gradient(circle, rgba(251,175,63,0.12) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        .connect-section::after {
+            content: '';
+            position: absolute;
+            bottom: -150px; left: -100px;
+            width: 500px; height: 500px;
+            background: radial-gradient(circle, rgba(103,80,161,0.3) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .connect-inner {
+            position: relative;
+            z-index: 1;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .connect-top {
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+            gap: 3rem;
+            margin-bottom: 5rem;
+            flex-wrap: wrap;
+        }
+
+        .connect-headline {
+            font-size: clamp(2.5rem, 5vw, 5rem);
+            font-weight: 900;
+            line-height: 1;
+            color: var(--white);
+        }
+        .connect-headline span {
+            display: block;
+            font-style: italic;
+            font-family: 'Playfair Display', serif;
+            color: var(--beige);
+        }
+
+        .connect-phone-block { text-align: right; }
+        .connect-phone-label {
+            font-size: 0.65rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: rgba(255,255,255,0.35);
+            margin-bottom: 0.4rem;
+        }
+        .connect-phone-num {
+            font-size: 1.75rem;
+            font-weight: 800;
+            color: var(--white);
+            letter-spacing: 0.02em;
+        }
+        .connect-tagline {
+            font-size: 0.9rem;
+            color: rgba(255,255,255,0.4);
+            margin-top: 0.5rem;
+        }
+
+        .connect-divider {
+            height: 1px;
+            background: rgba(255,255,255,0.1);
+            margin-bottom: 4rem;
+        }
+
+        .connect-cards {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+        }
+
+        .connect-card {
+            position: relative;
+            background: rgba(255,255,255,0.04);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 16px;
+            padding: 2.5rem;
+            text-decoration: none;
+            color: var(--white);
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            overflow: hidden;
+            transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+        .connect-card::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(103,80,161,0.2), transparent);
+            opacity: 0;
+            transition: opacity 0.4s;
+        }
+        .connect-card:hover {
+            border-color: rgba(251,175,63,0.4);
+            transform: translateY(-6px);
+            box-shadow: 0 24px 48px rgba(0,0,0,0.3);
+        }
+        .connect-card:hover::before { opacity: 1; }
+
+        .connect-card-icon {
+            width: 56px; height: 56px;
+            border: 1px solid rgba(255,255,255,0.15);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            z-index: 1;
+        }
+        .connect-card-icon svg { color: var(--beige); }
+
+        .connect-card-body { position: relative; z-index: 1; }
+        .connect-card-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--white);
+            margin-bottom: 0.5rem;
+        }
+        .connect-card-text {
+            font-size: 0.82rem;
+            color: rgba(255,255,255,0.45);
+            line-height: 1.65;
+        }
+
+        .connect-card-cta {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.72rem;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--beige);
+            position: relative;
+            z-index: 1;
+            margin-top: auto;
+            opacity: 0;
+            transform: translateY(4px);
+            transition: opacity 0.3s, transform 0.3s;
+        }
+        .connect-card:hover .connect-card-cta {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* ─────────────────────────────────────────
+           GLOBAL ANIMATIONS
+        ───────────────────────────────────────── */
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(24px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.75s ease, transform 0.75s ease;
+        }
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .reveal-delay-1 { transition-delay: 0.1s; }
+        .reveal-delay-2 { transition-delay: 0.2s; }
+        .reveal-delay-3 { transition-delay: 0.3s; }
+
+        /* ─────────────────────────────────────────
+           RESPONSIVE
+        ───────────────────────────────────────── */
+
+        /* Tablet - 768px to 900px */
+        @media (max-width: 900px) {
+            .what-grid { grid-template-columns: 1fr; }
+            .what-card { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.12); }
+            .what-card:last-child { border-bottom: none; }
+            .connect-cards { grid-template-columns: 1fr; }
+            .what-header { flex-direction: column; align-items: flex-start; }
+            .what-desc { max-width: 100%; }
+            .brands-header { flex-direction: column; align-items: flex-start; }
+            .brands-sub { max-width: 100%; }
+            .connect-top { flex-direction: column; align-items: flex-start; }
+            .connect-phone-block { text-align: left; }
+            .people-inner {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+            .people-secondary {
+                border-left: none;
+                border-top: 1px solid rgba(255,255,255,0.2);
+                padding: 2.5rem 0 0;
+            }
+            .hero {
+                grid-template-columns: 1fr;
+                grid-template-rows: auto auto auto;
+                padding: 8vh var(--page-pad) 3vh;
+            }
+            .hero-headline { grid-column: 1; }
+            .hero-sub { grid-column: 1; grid-row: 2; }
+            .hero-footer {
+                grid-column: 1;
+                grid-row: 3;
+                justify-self: stretch;
+                grid-template-columns: repeat(5, 1fr);
+                gap: 0;
+                padding: 1.25rem 0.25rem;
+            }
+            .hero-stat-item { padding: 0.5rem 0.5rem; }
+        }
+
+        /* Phone - up to 640px */
+        @media (max-width: 640px) {
+            :root { --page-pad: 1.5rem; }
+            .hero { padding: 7vh var(--page-pad) 3vh; }
+            .hero-body-wrap { padding: 0; }
+            .hero-footer { justify-self: stretch; grid-template-columns: repeat(5, 1fr); gap: 0; padding: 0.9rem 0.15rem; }
+            .hero-stat-item { padding: 0.4rem 0.2rem; gap: 0.35rem; }
+            .hero-stat-num { font-size: 0.78rem; letter-spacing: 0; }
+            .hero-stat-icon { width: 18px; height: 18px; }
+            .hero-stat-label { font-size: 0.42rem; letter-spacing: 0.1em; }
+            .hero-scroll { display: none; }
+            .what-section, .connect-section { padding: 4rem var(--page-pad); }
+            .people-section { padding: 4.5rem var(--page-pad); }
+            .taste-section { padding: 4rem 0; }
+            .brands-section { padding: 4rem 0; }
+            .brands-header, .brands-cta { padding: 0 var(--page-pad); }
+            .taste-inner { padding: 0 var(--page-pad); }
+            .brand-item { flex: 0 0 120px; height: 120px; }
+            .what-card { padding: 2rem var(--page-pad); }
+            .connect-section { padding: 4rem var(--page-pad); }
+            .connect-top { margin-bottom: 1.5rem; }
+            .connect-divider { display: none; }
+            .connect-cards { gap: 1rem; }
+            .connect-card {
+                padding: 1.75rem;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+            }
+            .connect-card-cta { justify-content: center; }
+            .taste-frame iframe { height: 320px; }
+        }
+    </style><link rel="stylesheet" href="/site.css"><link rel="stylesheet" href="/footer.css"><link rel="stylesheet" href="/motion.css"></head><body><a class="skip-link" href="#main">Skip to content</a><header class="site-header"><div class="site-header-inner"><a class="site-logo" href="/" aria-label="RCX Group home"><img src="/images/logos/RCX fit.webp" alt="RCX Group"></a><button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="site-nav"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg></button><nav id="site-nav" class="site-nav" aria-label="Main navigation"><a href="/" aria-current="page">Home</a><div class="nav-drop nav-portfolio"><a class="nav-portfolio__link" href="/portfolio/">Portfolio</a><button class="portfolio-toggle" type="button" aria-label="Browse portfolio brands" aria-expanded="false" aria-controls="nav-brand-list"><svg viewBox="0 0 20 20" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="m5 7.5 5 5 5-5"/></svg></button><div class="nav-menu" id="nav-brand-list" hidden><a href="/portfolio/common-space/">Common Space</a><a href="/portfolio/dancing-fish/">Dancing Fish</a><a href="/portfolio/fangkong/">Fang Kong</a><a href="/portfolio/paperkite-chicken-beer/">Paperkite Chicken &amp; Beer</a><a href="/portfolio/picaro/">PICARO</a><a href="/portfolio/the-rabbit-hole/">The Rabbit Hole</a><a href="/portfolio/rama-v/">Rama V</a><a href="/portfolio/suzie-wong/">Suzie Wong</a><a href="/portfolio/tap-room/">Tap Room</a><a href="/portfolio/tap-tap/">TAP TAP</a><a href="/portfolio/the-beer-factory/">The Beer Factory</a><a href="/portfolio/thai-hou-sek/">Thai Hou Sek</a><a href="/portfolio/the-attic/">The Attic</a><a href="/portfolio/tono-izakaya/">Tono Izakaya</a></div></div><a href="/about-us/">About Us</a><a href="/join-us/">Join us</a><a href="/contact-us/">Contact Us</a><a href="/news/">News & Updates</a></nav></div></header><main id="main" class="site-main">
+
+
+
+    <!-- ── HERO ──────────────────────────────────── -->
+    <section class="hero">
+        <img src="/images/hero/home-clean.webp" alt="RCX Group" class="hero-bg">
+
+        <div class="hero-body-wrap">
+            <h1 class="hero-headline">
+                To Elevate Lives Through <em>Hospitality</em>.
+            </h1>
+            <div class="hero-sub">
+                <p class="hero-supporting">We Buy, Create &amp; Operate Iconic F&amp;B Brands.</p>
+                <p>We build brands people love, experiences people remember and careers that help people grow.</p>
+            </div>
+        </div>
+
+        <div class="hero-footer">
+            <div class="hero-stat-item">
+                <svg class="hero-stat-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20.59 13.41 13.42 20.58a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg>
+                <div class="hero-stat-num">16+</div>
+                <div class="hero-stat-label">Brands</div>
+            </div>
+            <div class="hero-stat-item">
+                <svg class="hero-stat-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                <div class="hero-stat-num">33+</div>
+                <div class="hero-stat-label">Outlets</div>
+            </div>
+            <div class="hero-stat-item">
+                <svg class="hero-stat-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                <div class="hero-stat-num">5</div>
+                <div class="hero-stat-label">Countries</div>
+            </div>
+            <div class="hero-stat-item">
+                <svg class="hero-stat-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.582a.5.5 0 0 1 0 .962L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"/></svg>
+                <div class="hero-stat-num">Michelin</div>
+                <div class="hero-stat-label">Recognized Concepts</div>
+            </div>
+            <div class="hero-stat-item">
+                <svg class="hero-stat-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/></svg>
+                <div class="hero-stat-num">Award-Winning</div>
+                <div class="hero-stat-label">Experiences</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── WHAT WE DO ─────────────────────────────── -->
+    <section class="what-section" id="what">
+        <p class="section-label">Our Approach</p>
+        <div class="what-header">
+            <h2 class="what-title">
+                Hospitality That Makes Life <em>Better</em>
+            </h2>
+            <p class="what-desc">
+                RCX is an F&amp;B group built around one belief: hospitality should make life better. We create brands, help strong concepts grow and operate them with care. As RCX grows, we create more opportunities for our people, partners and communities.
+            </p>
+        </div>
+
+        <div class="what-grid">
+            <div class="what-card">
+                <div class="what-num">01</div>
+                <div class="what-card-title">BUY</div>
+                <div class="what-card-text">We invest in strong brands and work with founders to help them grow.</div>
+
+            </div>
+
+            <div class="what-card">
+                <div class="what-num">02</div>
+                <div class="what-card-title">CREATE</div>
+                <div class="what-card-text">We turn ideas into clear concepts and memorable experiences.</div>
+
+            </div>
+
+            <div class="what-card">
+                <div class="what-num">03</div>
+                <div class="what-card-title">OPERATE</div>
+                <div class="what-card-text">We build the people, systems and standards needed to deliver consistently.</div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ── PEOPLE & CAREERS ───────────────────────── -->
+    <section class="people-section" id="careers">
+        <div class="people-inner">
+            <div class="people-primary">
+                <h2 class="people-title">Brands Grow When People <span>Grow</span></h2>
+                <p class="people-copy">The best place to eat should also be the best place to work. We invest in skills, coaching, leadership and career opportunities so our people can grow with RCX.</p>
+                <a href="/join-us/" class="btn-outline-dark people-cta">
+                    Explore Careers
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+                </a>
+            </div>
+
+            <div class="people-secondary">
+                <h3 class="people-secondary-title">Talent Can Come From Anywhere</h3>
+                <p class="people-secondary-copy">Background does not define your ceiling. Your performance does. Through training, work and support, we help people build meaningful careers in hospitality.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── HOUSE OF BRANDS ────────────────────────── -->
+    <section class="brands-section" id="brands">
+        <div class="brands-header">
+            <p class="section-label purple">Portfolio</p>
+            <div class="brands-title-wrap">
+                <h2 class="brands-title">
+                    House of <span>Brands</span>
+                </h2>
+                <p class="brands-sub">
+                    Iconic F&amp;B brands across Asia — each with a distinct soul, a loyal community, and a reason to exist.
+                </p>
+            </div>
+        </div>
+
+        <!-- Carousel -->
+        <div class="brands-carousel-wrapper" id="brand-carousel">
+            <div class="brands-carousel-track">
+                <div class="brand-item"><img src="/images/brands/common-space/logo.webp" alt="Common Space"></div>
+                <div class="brand-item"><img src="/images/brands/dancing-fish/logo.webp" alt="Dancing Fish"></div>
+                <div class="brand-item"><img src="/images/brands/fang-kong/logo.webp" alt="Fang Kong"></div>
+                <div class="brand-item"><img src="/images/brands/paperkite-chicken-beer/logo.webp" alt="Paperkite Chicken &amp; Beer"></div>
+                <div class="brand-item"><img src="/images/brands/picaro/logo.webp" alt="Picaro"></div>
+                <div class="brand-item"><img src="/images/brands/the-rabbit-hole/logo.webp" alt="The Rabbit Hole"></div>
+                <div class="brand-item"><img src="/images/brands/rama-v/logo.webp" alt="Rama V"></div>
+                <div class="brand-item"><img src="/images/brands/suzie-wong/logo.webp" alt="Suzie Wong"></div>
+                <div class="brand-item"><img src="/images/brands/tap-room/logo.webp" alt="Tap Room"></div>
+                <div class="brand-item"><img src="/images/brands/tap-tap/logo.webp" alt="TAP TAP"></div>
+                <div class="brand-item"><img src="/images/brands/the-beer-factory/logo.webp" alt="The Beer Factory"></div>
+                <div class="brand-item"><img src="/images/brands/thai-hou-sek/logo.webp" alt="Thai Hou Sek"></div>
+                <div class="brand-item"><img src="/images/brands/the-attic/logo.webp" alt="The Attic"></div>
+                <div class="brand-item"><img src="/images/brands/tono-izakaya/logo.webp" alt="Tono Izakaya"></div>
+                <!-- duplicate -->
+                <div class="brand-item"><img src="/images/brands/common-space/logo.webp" alt="Common Space"></div>
+                <div class="brand-item"><img src="/images/brands/dancing-fish/logo.webp" alt="Dancing Fish"></div>
+                <div class="brand-item"><img src="/images/brands/fang-kong/logo.webp" alt="Fang Kong"></div>
+                <div class="brand-item"><img src="/images/brands/paperkite-chicken-beer/logo.webp" alt="Paperkite Chicken &amp; Beer"></div>
+                <div class="brand-item"><img src="/images/brands/picaro/logo.webp" alt="Picaro"></div>
+                <div class="brand-item"><img src="/images/brands/the-rabbit-hole/logo.webp" alt="The Rabbit Hole"></div>
+                <div class="brand-item"><img src="/images/brands/rama-v/logo.webp" alt="Rama V"></div>
+                <div class="brand-item"><img src="/images/brands/suzie-wong/logo.webp" alt="Suzie Wong"></div>
+                <div class="brand-item"><img src="/images/brands/tap-room/logo.webp" alt="Tap Room"></div>
+                <div class="brand-item"><img src="/images/brands/tap-tap/logo.webp" alt="TAP TAP"></div>
+                <div class="brand-item"><img src="/images/brands/the-beer-factory/logo.webp" alt="The Beer Factory"></div>
+                <div class="brand-item"><img src="/images/brands/thai-hou-sek/logo.webp" alt="Thai Hou Sek"></div>
+                <div class="brand-item"><img src="/images/brands/the-attic/logo.webp" alt="The Attic"></div>
+                <div class="brand-item"><img src="/images/brands/tono-izakaya/logo.webp" alt="Tono Izakaya"></div>
+            </div>
+        </div>
+
+        <div class="brands-cta">
+            <a href="/portfolio/" class="btn-outline-dark">
+                View All Brands
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+            </a>
+            <button class="carousel-toggle" type="button" data-carousel-toggle aria-controls="brand-carousel" aria-label="Pause brand carousel" hidden>Pause</button>
+            <span class="brands-count-text">Our brands across Asia</span>
+        </div>
+    </section>
+
+    <!-- ── TASTE N ID ─────────────────────────────── -->
+    <section class="taste-section" id="taste">
+        <div class="taste-inner">
+            <div class="taste-header">
+                <p class="section-label">Our Collection</p>
+                <div class="taste-title-wrap">
+                    <h2 class="taste-title">
+                        Taste <em>&amp;</em> ID
+                    </h2>
+                    <p class="taste-sub">
+                        Every brand under our care is crafted with intention, powered by culture, and built to last — turning ideas into living, breathing spaces people fall in love with.
+                    </p>
+                </div>
+            </div>
+            <div class="taste-frame">
+                <iframe src="https://publuu.com/flip-book/945428/2075607/page/1?embed&amp;nobg=1" title="Taste &amp; ID by RCX digital flipbook" loading="lazy" scrolling="no" allowfullscreen></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── CONNECT ────────────────────────────────── -->
+    <section class="connect-section" id="connect">
+        <div class="connect-inner">
+            <div class="connect-top">
+                <h2 class="connect-headline">
+                    Let's Come
+                    <span>Together</span>
+                </h2>
+                <div class="connect-phone-block">
+                    <p class="connect-phone-label">Call us</p>
+                    <p class="connect-phone-num">03 - 8605 - 3000</p>
+                    <p class="connect-tagline">Your journey into the world of F&amp;B begins here</p>
+                </div>
+            </div>
+
+            <div class="connect-divider"></div>
+
+            <div class="connect-cards">
+                <a href="/join-us/" class="connect-card">
+                    <div class="connect-card-body">
+                        <div class="connect-card-title">Career Opportunities</div>
+                        <div class="connect-card-text">Join our team and be part of creating iconic F&amp;B experiences across Asia.</div>
+                    </div>
+                    <div class="connect-card-cta">Explore roles →</div>
+                </a>
+
+                <a href="/contact-us/" class="connect-card">
+                    <div class="connect-card-body">
+                        <div class="connect-card-title">General Enquiries</div>
+                        <div class="connect-card-text">Have a question or just want to say hello? We'd love to hear from you.</div>
+                    </div>
+                    <div class="connect-card-cta">Get in touch →</div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    revealObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+
+        document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+    </script>
+</main><footer class="rcx-footer" aria-label="RCX Group">
+    <div class="rcx-footer__inner">
+        <div class="rcx-footer__top">
+            <div class="rcx-footer__brand">
+                <a class="rcx-footer__home" href="/" aria-label="RCX Group home">
+                    <img class="rcx-footer__logo" src="/images/logos/OTHERS-25-037_RCX Rebrand-OL-Logo 2_Horizontal-White.webp" alt="RCX Group" width="190" height="56" loading="lazy">
+                </a>
+                
+            </div>
+            <nav aria-label="Company"><h2 class="rcx-footer__title">Company</h2><ul class="rcx-footer__links"><li><a href="/about-us/">About Us</a></li><li><a href="/news/">News &amp; Updates</a></li></ul></nav><nav aria-label="Our brands"><h2 class="rcx-footer__title">Our brands</h2><ul class="rcx-footer__links"><li><a href="/portfolio/">Portfolio</a></li></ul></nav><nav aria-label="Connect"><h2 class="rcx-footer__title">Connect</h2><ul class="rcx-footer__links"><li><a href="/join-us/">Join Us</a></li><li><a href="/contact-us/">Contact Us</a></li></ul></nav>
+        </div>
+        <dl class="rcx-footer__contacts"><div class="rcx-footer__contact"><dt>Telephone</dt><dd><a href="tel:+60358820108">+603 5882 0108</a></dd></div><div class="rcx-footer__contact"><dt>Email</dt><dd><a href="mailto:info@rcxgroup.com">info@rcxgroup.com</a></dd></div><div class="rcx-footer__contact"><dt>Fax</dt><dd>+603 5879 7135</dd></div><div class="rcx-footer__contact"><dt>Head office</dt><dd><address>E-6-6, Block E, SetiaWalk,<br>Persiaran Wawasan, Pusat Bandar Puchong,<br>47160 Puchong, Selangor.</address></dd></div></dl>
+        <div class="rcx-footer__bottom">
+            <p class="rcx-footer__copyright">&copy; 2026 Rhombus Connexion Sdn. Bhd. <span>201501022077 (1147405-K)</span> All rights reserved.</p>
+            
+        </div>
+    </div>
+</footer>
+<script src="/site.js" defer></script><script src="/motion.js" defer></script></body></html>

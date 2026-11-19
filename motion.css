@@ -1,0 +1,127 @@
+/* Quiet, shared rhythm: section introductions and cards move as complete units. */
+.site-main {
+    --rcx-motion-duration:560ms;
+    --rcx-motion-distance:12px;
+    --rcx-motion-ease:cubic-bezier(.25,.46,.45,.94);
+}
+.site-main .rcx-text-reveal { opacity:1; }
+.site-main .rcx-text-reveal[data-motion-kind="heading"],
+.site-main .rcx-text-reveal[data-motion-kind="copy"] { transition:none; }
+.site-main .rcx-text-reveal[data-motion-kind="copy"] { --rcx-motion-distance:8px; }
+@keyframes rcx-hero-title-enter {
+    from { opacity:.65; transform:translate3d(0,12px,0); }
+    to { opacity:1; transform:none; }
+}
+@keyframes rcx-hero-copy-enter {
+    from { opacity:.8; transform:translate3d(0,8px,0); }
+    to { opacity:1; transform:none; }
+}
+@media (prefers-reduced-motion:no-preference) {
+    .site-main :is(.hero,.page-hero,.brand-hero) h1 {
+        animation:rcx-hero-title-enter 680ms var(--rcx-motion-ease) both;
+    }
+    .site-main .hero .hero-sub,.site-main .page-hero .hero-sub,.site-main .brand-hero .brand-hero__region {
+        animation:rcx-hero-copy-enter 560ms var(--rcx-motion-ease) 80ms both;
+    }
+}
+@media (max-width:640px) and (prefers-reduced-motion:no-preference) {
+    .site-main :is(.hero,.page-hero,.brand-hero) h1 { animation-duration:600ms; }
+    .site-main .hero .hero-sub,.site-main .page-hero .hero-sub,.site-main .brand-hero .brand-hero__region { animation-duration:520ms; }
+}
+@media (prefers-reduced-motion:reduce),print {
+    .site-main :is(.hero,.page-hero,.brand-hero) :is(h1,.hero-sub,.brand-hero__region) { animation:none!important; opacity:1!important; transform:none!important; }
+}
+.site-main .connect-card { transition:background-color 200ms ease-out,border-color 200ms ease-out,transform 220ms var(--rcx-motion-ease); }
+@keyframes rcx-text-enter {
+    from { opacity:0; transform:translate3d(0,var(--rcx-motion-distance),0); }
+    to { opacity:1; transform:none; }
+}
+@media (prefers-reduced-motion: no-preference) {
+    .site-main .rcx-text-reveal[data-text-reveal="pending"] {
+        opacity:0;
+        transform:translate3d(0,var(--rcx-motion-distance),0);
+        transition:none;
+    }
+    .site-main .rcx-text-reveal[data-text-reveal="visible"][data-motion-play="true"] {
+        animation:rcx-text-enter var(--rcx-motion-duration) var(--rcx-motion-ease) var(--rcx-motion-delay,0ms) both;
+    }
+}
+@media (max-width:640px) {
+    .site-main { --rcx-motion-duration:500ms; --rcx-motion-distance:8px; }
+    .site-main .rcx-text-reveal[data-motion-kind="copy"] { --rcx-motion-distance:6px; }
+}
+.site-main .rcx-text-reveal--instant { opacity:1 !important; transform:none !important; animation:none !important; transition:none !important; }
+@media (prefers-reduced-motion: reduce), print {
+    .site-main .rcx-text-reveal { opacity:1 !important; transform:none !important; animation:none !important; transition:none !important; }
+    .site-main .brands-carousel-track { animation:none !important; }
+}
+
+/* Interaction feedback shares one short rhythm across every route. */
+:root {
+    --rcx-motion-feedback:160ms;
+    --rcx-motion-surface:220ms;
+    --rcx-motion-ease:cubic-bezier(.25,.46,.45,.94);
+}
+.site-nav a,.portfolio-toggle,.rcx-footer a,
+.site-main :is(.brand-button,.brand-text-link,.map-btn),
+.rcx-brand .brand-venue__directions a,.rcx-brand .brand-lightbox button {
+    transition:color var(--rcx-motion-feedback) ease-out,background-color var(--rcx-motion-feedback) ease-out,border-color var(--rcx-motion-feedback) ease-out;
+}
+.site-main .brand-card { transition:border-color 180ms ease-out,box-shadow 220ms ease-out,transform 180ms var(--rcx-motion-ease); }
+.site-main .brand-card:hover,.site-main .connect-card:hover { transform:translateY(-2px); }
+.site-main .brand-card-logo img { transition:transform 260ms var(--rcx-motion-ease); }
+.site-main .brand-card:hover .brand-card-logo img { transform:scale(1.025); }
+.site-main .benefit-card:hover { transform:none; }
+.site-main .job-card-body { transition:none; }
+.site-main .job-card.open .job-card-body { max-height:none; }
+.site-main .job-chevron { transition:transform 180ms var(--rcx-motion-ease),color 160ms ease-out; }
+.site-main .job-card-title { max-width:100%; overflow-wrap:anywhere; }
+.site-main .job-tag { max-width:100%; white-space:normal; }
+@media (max-width:640px) {
+    .site-main .job-card-header { padding:clamp(1rem,3vw,1.25rem); }
+}
+.site-main :is(.brand-button,.brand-text-link,.btn-outline-dark,.btn-dark,.rcx-form__submit):active,
+.menu-toggle:active { transform:translateY(1px); }
+.site-main .brands-carousel-track { animation-play-state:paused; }
+.site-main .brands-carousel-track.is-running { animation-play-state:running; }
+.site-main .brands-carousel-track.is-running:hover { animation-play-state:paused; }
+.site-main .carousel-toggle { display:inline-flex; align-items:center; justify-content:center; min-height:44px; padding:.6rem 1rem; border:1px solid #d8d1e3; border-radius:100px; background:transparent; color:#3e2a6e; font:500 .8rem/1.3 Montserrat,system-ui,sans-serif; cursor:pointer; transition:background-color 160ms ease-out; }
+.site-main .carousel-toggle:hover { background:#f0ecf8; }
+.site-main .carousel-toggle[hidden] { display:none; }
+.site-main .brands-cta { flex-wrap:wrap; }
+@keyframes rcx-surface-enter {
+    from { opacity:.65; transform:translateY(4px); }
+    to { opacity:1; transform:none; }
+}
+@keyframes rcx-feedback-enter { from { opacity:.6; } to { opacity:1; } }
+@keyframes rcx-pending { to { transform:rotate(360deg); } }
+@media (prefers-reduced-motion:no-preference) {
+    .rcx-brand .brand-lightbox[open] { animation:rcx-surface-enter var(--rcx-motion-surface) var(--rcx-motion-ease) both; }
+    .rcx-brand .brand-lightbox[open]::backdrop { animation:rcx-feedback-enter 180ms ease-out both; }
+    .rcx-brand details.brand-venue[open]>.brand-venue__body { animation:rcx-feedback-enter 160ms ease-out both; }
+    .site-main .job-card.open .job-card-body-inner { animation:rcx-feedback-enter 160ms ease-out both; }
+    .rcx-form-panel .rcx-field__error:not([hidden]),.rcx-form-panel .rcx-form__status:not([hidden]) { animation:rcx-feedback-enter 160ms ease-out both; }
+    .rcx-form[aria-busy="true"] .rcx-form__submit::before { content:''; width:12px; height:12px; flex-shrink:0; border:2px solid currentColor; border-right-color:transparent; border-radius:50%; animation:rcx-pending 800ms linear infinite; }
+}
+/* Navigation opens immediately; the destination provides the page crossfade. */
+@media (hover:none) {
+    .site-main .brand-card:hover,.site-main .connect-card:hover { transform:none; }
+    .site-main .brand-card:hover .brand-card-logo img,.rcx-brand .brand-gallery__photo:hover img { transform:none; }
+}
+@media (prefers-reduced-motion:reduce),print {
+    .site-nav,.nav-menu,.rcx-brand .brand-lightbox,.rcx-brand .brand-lightbox::backdrop,
+    .rcx-brand .brand-venue__body,.site-main .job-card-body-inner,.rcx-form-panel .rcx-field__error,.rcx-form-panel .rcx-form__status { animation:none!important; }
+    .site-main .brand-card:hover,.site-main .connect-card:hover,.site-main .brand-card:hover .brand-card-logo img,.rcx-brand .brand-gallery__photo:hover img { transform:none; }
+}
+
+/* Native document-to-document continuity; links and history stay native.
+   The opt-in lives in the document head so it is ready on a cold stylesheet load. */
+.site-header { view-transition-name:rcx-header; }
+::view-transition-group(root) { animation-duration:240ms; }
+::view-transition-old(root),::view-transition-new(root) { animation-duration:240ms; animation-timing-function:ease-in-out; }
+::view-transition-group(rcx-header) { animation:none; }
+::view-transition-old(rcx-header) { animation:none; opacity:0; }
+::view-transition-new(rcx-header) { animation:none; mix-blend-mode:normal; }
+@media(prefers-reduced-motion:reduce),print {
+    .site-header { view-transition-name:none; }
+}
